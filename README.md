@@ -31,7 +31,7 @@ It can currently load the following information, but I can't yet tell if it's fu
 
 * Object rotations (yaw-angle is known to be accurate)
 
-Large amounts of important information are defined solely in the base canvases (`*.map` files) and ot in the map variant. Reading map files (as opposed to map variant files) would be a colossal endeavor, especially because it doesn't <em>seem</em> like 343i invests much into backwards-compatibility (what with mod authors having to basically "recompile" their maps with each game update)? So instead, where this tool requires data from base canvases, that specific data has been exported to XML using the game's official modding tools, and this tool just reads those XML files.
+Large amounts of important information are defined solely in the base canvases (`*.map` files) and not in the map variant. Reading map files (as opposed to map variant files) would be a colossal endeavor, not least because AFAIK game patches often change the format and the game doesn't seem to support loading older-format data (what with mod authors having to basically "recompile" their maps with each game update). So instead, where this tool requires data from base canvases, that specific data has been exported to XML using the game's official modding tools, and this tool just reads those XML files.
 
 Disclaimer: Most of the code for reading bitpacked data and map variants is very old (some of it was originally used to prototype ReachVariantTool, and my first investigation into map variants dates back years) and probably not up to my current standards of quality.
 
