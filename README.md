@@ -59,7 +59,9 @@ This project incorporates the [pako](https://github.com/nodeca/pako) library for
 
 ## How to use
 
-Dump it onto a local web server and load `index.html`. Upload a map variant file using the file uploader at the top. The whole thing runs in-browser.
+Dump it onto a local web server and load `index.html`. Upload a map variant file using the file uploader at the top. The whole thing runs in-browser. Should end up looking something like this once you click the "load" button, presuming you've picked a base canvas that I've added the full XML data for:
+
+![Screenshot showing Hemorrhage loaded.](README-image.png)
 
 The `filter.html` file exists as a favor for someone else, who's trying to find a specific map variant from circa 2011 given very little information to go on. (Basically the only visual evidence of it that remains available today is one (1) YouTube video.) It's designed to take several (potentially hundreds) map variants at a time, scan them, and tell you if any of them have the Forge objects (in the appropriate quantities) that the desired map variant is known to have. The search criteria are hardcoded into the script with no UI to adjust them with. I also haven't updated the HTML file since I sent it to them, so I may have ended up making breaking changes to the scripts it relies on.
 
