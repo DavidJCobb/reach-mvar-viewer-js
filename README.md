@@ -4,28 +4,28 @@ A browser-based utility that can load and parse Halo: Reach map variants (`*.mva
 It can currently load the following information accurately:
 
 * Map data
-** UGC header (name, description, authorship, etc.)
-** Cached map budget info (usage and max)
-** Forge labels
-** Min Count and Max Count for all used object types
+  * UGC header (name, description, authorship, etc.)
+  * Cached map budget info (usage and max)
+  * Forge labels
+  * Min Count and Max Count for all used object types
 * Objects
-** Type indices (requires information from the base canvas (`*.map`) to identify the type from these)
-** Position
-** Respawn Time
-** Team
-** Color
-** Shape
-** Gametype-Specific
-** Placed at Start
-** Spawn Sequence
-** Forge label
-** Named Location options
-*** Name index
-** Teleporter options
-*** Channel
-*** Allow/Deny object types
-** Weapon options
-*** Spare Clips
+  * Type indices (requires information from the base canvas (`*.map`) to identify the type from these)
+  * Position
+  * Respawn Time
+  * Team
+  * Color
+  * Shape
+  * Gametype-Specific
+  * Placed at Start
+  * Spawn Sequence
+  * Forge label
+  * Named Location options
+    * Name index
+  * Teleporter options
+    * Channel
+    * Allow/Deny object types
+  * Weapon options
+    * Spare Clips
 
 It can currently load the following information, but I can't yet tell if it's fully accurate:
 
@@ -47,14 +47,14 @@ This project incorporates the [pako](https://github.com/nodeca/pako) library for
 
 * Table showing the map metadata
 * Overhead view of all object positions (indicated by dots)
-** If the data is available, the base canvas's built-in named locations will be drawn, making it easier to discern the map's shape and tell roughly where objects have been placed on it
+  * If the data is available, the base canvas's built-in named locations will be drawn, making it easier to discern the map's shape and tell roughly where objects have been placed on it
 ** Objects with cylindrical or spherical shapes have those shapes drawn (in the former case, on the blind assumption that the objects aren't rotated)
-** Map can be zoomed using a slider
+  * Map can be zoomed using a slider
 * Table listing all placed placed objects and some of their properties
-** Clicking on a table row selects that object: its dot on the map will turn red
+  * Clicking on a table row selects that object: its dot on the map will turn red
 * Buttons to filter the tableview
-** By map palette category
-** By trait (e.g. "require Forge label")
+  * By map palette category
+  * By trait (e.g. "require Forge label")
 
 
 ## How to add map data
@@ -79,14 +79,14 @@ Naming conventions for map data are: `/map-data/<reach-map-ID>/<whatever>.xml`.
 * Because we use `:focus` and `focusin` to indicate the selected table row, if the page as a whole loses focus, the table row that you had selected loses all visual indication of being selected.
 * When the mouse is over one or more of the map's named locations, we should display the names of all such locations somehow. (Yes, all: locations can overlap, and Forge World has one location that covers the entire map including all other locations.)
 * Fix the issue where when you zoom into the map, object shapes are drawn with too thick a line. This is a result of web browsers en masse being stupid about applying `scale` to `border-width` and forcing a minimum border width of 1px pre-scaling. The only solution will be to draw these object shapes using another SVG element rather than using borders on the dots.
-** If custom elements can subclass SVG elements, then we may as well subclass `circle` or something and put the dots inside that SVG too.
-*** Firefox, at the least, also mishandles multiple elements scaled in tandem &mdash; from what I've seen, sometimes one of the layers will just *shift* a few pixels at random and I have no idea why the hell this happens &mdash; so drawing everything to a single SVG would probably be best anyway. (I love frontend!)
+  * If custom elements can subclass SVG elements, then we may as well subclass `circle` or something and put the dots inside that SVG too.
+    * Firefox, at the least, also mishandles multiple elements scaled in tandem &mdash; from what I've seen, sometimes one of the layers will just *shift* a few pixels at random and I have no idea why the hell this happens &mdash; so drawing everything to a single SVG would probably be best anyway. (I love frontend!)
 * It'd be nice if, when you click on a `RACE_FLAG`-labeled object in the table, we could draw an arrow to the next race checkpoints (i.e. the object(s) that share the next-highest spawn sequence; or, if none exist, the object(s) that share the lowest spawn sequence on the map).
 * New search features:
-** Require Shape
+  * Require Shape
 * Ability to sort the tableview by any column
 * Table columns
-** Symmetry
+  * Symmetry
 
 ### Intermediate
 
@@ -100,5 +100,5 @@ Naming conventions for map data are: `/map-data/<reach-map-ID>/<whatever>.xml`.
 * Currently I use a custom `DevtoolsFormatter` class to be able to customize how objects display in Firefox's devtools. (Despite its size, the class doesn't offer a lot of functionality: the relevant APIs are such that if you want to make even the tiniest tweak to how objects are debugged, you basically have to rebuild the entire object debugger.) It'd be nice if it were possible to load, say, a Natvis XML file and use that to guide browser devtools behavior. You know &mdash; an actually sane form of this kind of customization.
 
 * Obviously the *very* most advanced thing we could try to do with this is extract Reach's models, simplify the hell out of them to erase most details, and then make a basic 3D map viewer. (The simplification step would be akin to Wikipedia only using low-resolution images of copyrighted content: a way to stay fair-use by ensuring that the models we embed into the map viewer can't ever actually be a substitute for the real thing.)
-** I suppose an even more advanced thing to do would be to make a full-on editor...
-*** No. *NO.* Not until DovahKit is *well into* its planned sustain phases.
+  * I suppose an even more advanced thing to do would be to make a full-on editor...
+    * No. *NO.* Not until DovahKit is *well into* its planned sustain phases.
