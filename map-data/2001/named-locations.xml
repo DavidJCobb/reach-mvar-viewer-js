@@ -1,0 +1,563 @@
+<data>
+    <field name="named location volumes" value="18" type="block"/>
+    <element index="0" name="slayer_sabre">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-2.57599,12.9972,3.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="3.36088,12.9972,3.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="3.36088,20.8249,3.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-2.57599,20.8249,3.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="3" type="real"/>
+        <field name="sink" value="0.8" type="real"/>
+        <field name="location name" value="slayer_sabre" type="string id"/>
+    </element>
+    <element index="1" name="slayer_hump">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-1.66057,7.03262,-0.699756" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="1.63266,7.03262,-0.699756" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="1.63266,15.7211,-0.699756" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-1.66057,15.7211,-0.699756" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="0.8" type="real"/>
+        <field name="location name" value="slayer_hump" type="string id"/>
+    </element>
+    <element index="2" name="slayer_hangar">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-2.1895,13.6694,1.00024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="2.20571,13.6694,1.00024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="2.20571,21.8768,1.00024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-2.1895,21.8768,1.00024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="6" type="real"/>
+        <field name="sink" value="3" type="real"/>
+        <field name="location name" value="slayer_hangar" type="string id"/>
+    </element>
+    <element index="3" name="slayer_weapon_control">
+        <field name="points" value="11" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="10.1334,6.37606,1.1" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="10.9258,5.03506,1.10025" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="11.4952,4.62851,1.1" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="14.5284,4.10269,1.12149" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="16.8224,3.97028,1.11814" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="18.8047,6.39508,1.1" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="19.0586,12.8729,1.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="13.3407,14.7003,1.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="8" name="8. named_location_volume_point_block">
+            <field name="position" value="8.68957,14.7452,1.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="9" name="9. named_location_volume_point_block">
+            <field name="position" value="8.36109,14.4159,1.10024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="10" name="10. named_location_volume_point_block">
+            <field name="position" value="8.6,9.7102,1.10387" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="5" type="real"/>
+        <field name="sink" value="0.01" type="real"/>
+        <field name="location name" value="slayer_weapon_control" type="string id"/>
+    </element>
+    <element index="4" name="slayer_weapon_ops">
+        <field name="points" value="11" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="11.4267,4.6802,-0.700033" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="12.4677,4.53662,-0.700033" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="14.0804,4.41337,-0.70003" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="17.415,4.59961,-0.682401" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="17.3714,12.9649,-0.699737" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="12.3951,14.6642,-0.699737" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="10.4105,14.6573,-0.699741" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="8.62431,13.0003,-0.69465" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="8" name="8. named_location_volume_point_block">
+            <field name="position" value="8.32248,12.4814,-0.699755" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="9" name="9. named_location_volume_point_block">
+            <field name="position" value="8.30605,11.0153,-0.699032" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="10" name="10. named_location_volume_point_block">
+            <field name="position" value="8.54318,9.64952,-0.700013" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="1" type="real"/>
+        <field name="location name" value="slayer_weapon_ops" type="string id"/>
+    </element>
+    <element index="5" name="slayer_repair_control">
+        <field name="points" value="11" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-18.24,13.1181,0.997163" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-18.19,5.77453,1.52656" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-16.7693,4.48953,1.56726" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-14.7972,4.37202,1.5624" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="-11.5316,4.51479,1.4846" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="-11.1381,5.15409,1.40656" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="-10.1465,6.71987,1.40656" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="-8.2552,9.69807,1.48311" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="8" name="8. named_location_volume_point_block">
+            <field name="position" value="-8.30253,13.0449,1.50839" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="9" name="9. named_location_volume_point_block">
+            <field name="position" value="-10.649,14.8325,1.40656" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="10" name="10. named_location_volume_point_block">
+            <field name="position" value="-12.3501,14.8412,1.41521" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="5" type="real"/>
+        <field name="sink" value="0" type="real"/>
+        <field name="location name" value="slayer_repair_control" type="string id"/>
+    </element>
+    <element index="6" name="slayer_repair_ops">
+        <field name="points" value="13" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-18.1057,13.2023,-0.653312" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-18.1303,4.66213,-0.700086" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-14.3418,4.35879,-0.699839" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-12.6357,4.38768,-0.70008" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="-11.4572,4.71081,-0.589174" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="-10.2666,6.69827,-0.612788" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="-8.60871,9.68211,-0.678041" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="-8.36242,11.2782,-0.700037" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="8" name="8. named_location_volume_point_block">
+            <field name="position" value="-8.36935,12.665,-0.70003" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="9" name="9. named_location_volume_point_block">
+            <field name="position" value="-8.6221,13.0425,-0.59288" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="10" name="10. named_location_volume_point_block">
+            <field name="position" value="-10.2038,13.1829,-0.69979" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="11" name="11. named_location_volume_point_block">
+            <field name="position" value="-10.2038,14.612,-0.699779" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="12" name="12. named_location_volume_point_block">
+            <field name="position" value="-12.5588,14.612,-0.699783" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="1" type="real"/>
+        <field name="location name" value="slayer_repair_ops" type="string id"/>
+    </element>
+    <element index="7" name="slayer_controlroom">
+        <field name="points" value="7" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-4.15246,-4.98126,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-2.37046,-6.01361,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-0.0134885,-6.2341,1.50644" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="2.76767,-5.94668,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="4.1493,-4.98126,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="4.1493,-1.2242,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="-4.15246,-1.2242,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="0.2" type="real"/>
+        <field name="location name" value="slayer_controlroom" type="string id"/>
+    </element>
+    <element index="8" name="slayer_observation">
+        <field name="points" value="8" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-4.43463,0.235394,1.54182" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-4.18296,-1.9611,1.51166" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="4.12067,-1.8703,1.51995" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="4.2365,0.285157,1.49431" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="2.78981,2.73927,1.50376" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="0.958057,4.88618,1.49616" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="-0.985603,4.90239,1.50154" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="-2.87961,2.84771,1.50436" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2.5" type="real"/>
+        <field name="sink" value="0" type="real"/>
+        <field name="location name" value="slayer_observation" type="string id"/>
+    </element>
+    <element index="9" name="slayer_weapon_ledge">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="13.2921,-4.89748,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="16.6378,-4.89748,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="16.6378,-1.92692,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="13.2921,-1.92692,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="0.5" type="real"/>
+        <field name="location name" value="slayer_weapon_ledge" type="string id"/>
+    </element>
+    <element index="10" name="slayer_repair_ledge">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-16.758,-4.97477,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-13.3182,-4.97477,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-13.3182,-1.85461,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-16.758,-1.85461,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="0.5" type="real"/>
+        <field name="location name" value="slayer_repair_ledge" type="string id"/>
+    </element>
+    <element index="11" name="slayer_external_plat">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-4.92195,-7.69201,1.48014" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="4.93786,-7.69201,1.48021" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="4.93786,-1.96981,1.4803" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-4.92195,-1.96981,1.48023" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2" type="real"/>
+        <field name="sink" value="0.5" type="real"/>
+        <field name="location name" value="slayer_external_plat" type="string id"/>
+    </element>
+    <element index="12" name="slayer_walkway">
+        <field name="points" value="8" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-3.58883,1.88744,-0.699832" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-4.46495,0.437771,-0.700085" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-4.31818,-0.630552,-0.699957" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="4.31507,-0.621075,-0.700069" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="4" name="4. named_location_volume_point_block">
+            <field name="position" value="4.41099,0.420606,-0.700069" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="5" name="5. named_location_volume_point_block">
+            <field name="position" value="3.56423,1.87611,-0.700063" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="6" name="6. named_location_volume_point_block">
+            <field name="position" value="1.10632,5.2563,-0.700052" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="7" name="7. named_location_volume_point_block">
+            <field name="position" value="-1.08325,5.24391,-0.700057" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2.01" type="real"/>
+        <field name="sink" value="0.8" type="real"/>
+        <field name="location name" value="slayer_walkway" type="string id"/>
+    </element>
+    <element index="13" name="slayer_walkway">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-1.85717,4.57281,0.700244" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="1.87226,4.57281,0.700244" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="1.87226,9.36747,0.700244" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-1.85717,9.36747,0.700244" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="2.5" type="real"/>
+        <field name="sink" value="0" type="real"/>
+        <field name="location name" value="slayer_walkway" type="string id"/>
+    </element>
+    <element index="14" name="slayer_weaponwing">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="4.47808,-9.41026,-1.39975" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="28.1137,-9.41026,-1.39975" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="28.1137,43.4044,-1.39975" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="4.47808,43.4044,-1.39976" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="10" type="real"/>
+        <field name="sink" value="5" type="real"/>
+        <field name="location name" value="slayer_weaponwing" type="string id"/>
+    </element>
+    <element index="15" name="slayer_repairwing">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-28.4622,-4.46208,-1.39977" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="-4.50409,-4.46208,-1.39978" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-4.50409,23.6665,-1.39979" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-28.4622,23.6665,-1.39977" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="10" type="real"/>
+        <field name="sink" value="5" type="real"/>
+        <field name="location name" value="slayer_repairwing" type="string id"/>
+    </element>
+    <element index="16" name="slayer_space">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="23.8052,-29.1477,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="23.8631,-2.60293,1.5" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="-25.0769,-2.17124,1.51561" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-25.2773,-28.7054,1.50024" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="15" type="real"/>
+        <field name="sink" value="15" type="real"/>
+        <field name="location name" value="slayer_space" type="string id"/>
+    </element>
+    <element index="17" name="slayer_hangar">
+        <field name="points" value="4" type="block"/>
+        <element index="0" name="0. named_location_volume_point_block">
+            <field name="position" value="-26.9333,-6.9497,-1.39977" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="1" name="1. named_location_volume_point_block">
+            <field name="position" value="22.9377,-6.9497,-1.39978" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="2" name="2. named_location_volume_point_block">
+            <field name="position" value="22.9377,48.1126,-1.39979" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <element index="3" name="3. named_location_volume_point_block">
+            <field name="position" value="-26.9333,48.1126,-1.39977" type="real point 3d"/>
+            <field name="normal" value="0,0" type="real euler angles 2d"/>
+        </element>
+        <field name="height" value="10" type="real"/>
+        <field name="sink" value="10" type="real"/>
+        <field name="location name" value="slayer_hangar" type="string id"/>
+    </element>
+</data>

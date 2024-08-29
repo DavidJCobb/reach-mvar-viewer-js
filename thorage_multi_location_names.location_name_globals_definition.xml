@@ -1,0 +1,770 @@
+<?xml version="1.0"?>
+<tag group="location_name_globals_definition" id="levels\multi\multi_location_names\thorage_multi_location_names" version="1">
+    <field name="location names" value="255" type="block"/>
+    <element index="0" name="damnation_abyss">
+        <field name="name" value="damnation_abyss" type="string id"/>
+    </element>
+    <element index="1" name="headlong_air_duct">
+        <field name="name" value="headlong_air_duct" type="string id"/>
+    </element>
+    <element index="2" name="headlong_airborne">
+        <field name="name" value="headlong_airborne" type="string id"/>
+    </element>
+    <element index="3" name="forge_bunkerworld_name">
+        <field name="name" value="forge_bunkerworld_name" type="string id"/>
+    </element>
+    <element index="4" name="boneyard_inv_ctrl_inside">
+        <field name="name" value="boneyard_inv_ctrl_inside" type="string id"/>
+    </element>
+    <element index="5" name="boneyard_inv_gen_back">
+        <field name="name" value="boneyard_inv_gen_back" type="string id"/>
+    </element>
+    <element index="6" name="swordbase_atrium">
+        <field name="name" value="swordbase_atrium" type="string id"/>
+    </element>
+    <element index="7" name="ivorytower_backhall">
+        <field name="name" value="ivorytower_backhall" type="string id"/>
+    </element>
+    <element index="8" name="ivorytower_backroom">
+        <field name="name" value="ivorytower_backroom" type="string id"/>
+    </element>
+    <element index="9" name="invasion_back">
+        <field name="name" value="invasion_back" type="string id"/>
+    </element>
+    <element index="10" name="forge_badlands_name">
+        <field name="name" value="forge_badlands_name" type="string id"/>
+    </element>
+    <element index="11" name="launchstation_balcony">
+        <field name="name" value="launchstation_balcony" type="string id"/>
+    </element>
+    <element index="12" name="invasion_barracks">
+        <field name="name" value="invasion_barracks" type="string id"/>
+    </element>
+    <element index="13" name="generic_basement">
+        <field name="name" value="generic_basement" type="string id"/>
+    </element>
+    <element index="14" name="medium_dryrocks">
+        <field name="name" value="medium_dryrocks" type="string id"/>
+    </element>
+    <element index="15" name="medium_sandyside">
+        <field name="name" value="medium_sandyside" type="string id"/>
+    </element>
+    <element index="16" name="medium_beach">
+        <field name="name" value="medium_beach" type="string id"/>
+    </element>
+    <element index="17" name="medium_beam">
+        <field name="name" value="medium_beam" type="string id"/>
+    </element>
+    <element index="18" name="launchstation_bigdoor">
+        <field name="name" value="launchstation_bigdoor" type="string id"/>
+    </element>
+    <element index="19" name="generic_lift_big">
+        <field name="name" value="generic_lift_big" type="string id"/>
+    </element>
+    <element index="20" name="beavercreek_blue_base">
+        <field name="name" value="beavercreek_blue_base" type="string id"/>
+    </element>
+    <element index="21" name="hang_blue_bunker">
+        <field name="name" value="hang_blue_bunker" type="string id"/>
+    </element>
+    <element index="22" name="aftship_liftroom_blue">
+        <field name="name" value="aftship_liftroom_blue" type="string id"/>
+    </element>
+    <element index="23" name="aftship_curvedhall_blue">
+        <field name="name" value="aftship_curvedhall_blue" type="string id"/>
+    </element>
+    <element index="24" name="timberland_blue_encampment">
+        <field name="name" value="timberland_blue_encampment" type="string id"/>
+    </element>
+    <element index="25" name="generic_lift_blue">
+        <field name="name" value="generic_lift_blue" type="string id"/>
+    </element>
+    <element index="26" name="aftship_hallway_blue">
+        <field name="name" value="aftship_hallway_blue" type="string id"/>
+    </element>
+    <element index="27" name="prisoner_blue_loft">
+        <field name="name" value="prisoner_blue_loft" type="string id"/>
+    </element>
+    <element index="28" name="generic_mancannon_blue">
+        <field name="name" value="generic_mancannon_blue" type="string id"/>
+    </element>
+    <element index="29" name="aftship_blueplatform">
+        <field name="name" value="aftship_blueplatform" type="string id"/>
+    </element>
+    <element index="30" name="prisoner_blue_ramp">
+        <field name="name" value="prisoner_blue_ramp" type="string id"/>
+    </element>
+    <element index="31" name="beavercreek_blue_roof">
+        <field name="name" value="beavercreek_blue_roof" type="string id"/>
+    </element>
+    <element index="32" name="generic_hive_blue">
+        <field name="name" value="generic_hive_blue" type="string id"/>
+    </element>
+    <element index="33" name="beavercreek_blue_teleporter">
+        <field name="name" value="beavercreek_blue_teleporter" type="string id"/>
+    </element>
+    <element index="34" name="trainingpreserve_bluetower">
+        <field name="name" value="trainingpreserve_bluetower" type="string id"/>
+    </element>
+    <element index="35" name="hang_blue_tunnels">
+        <field name="name" value="hang_blue_tunnels" type="string id"/>
+    </element>
+    <element index="36" name="island_bluff">
+        <field name="name" value="island_bluff" type="string id"/>
+    </element>
+    <element index="37" name="boneyard_inv_ctrl_outside">
+        <field name="name" value="boneyard_inv_ctrl_outside" type="string id"/>
+    </element>
+    <element index="38" name="boneyard_inv_gen_front">
+        <field name="name" value="boneyard_inv_gen_front" type="string id"/>
+    </element>
+    <element index="39" name="boneyard_ship_bulkhead">
+        <field name="name" value="boneyard_ship_bulkhead" type="string id"/>
+    </element>
+    <element index="40" name="forge_gulch_name">
+        <field name="name" value="forge_gulch_name" type="string id"/>
+    </element>
+    <element index="41" name="launchstation_catwalk">
+        <field name="name" value="launchstation_catwalk" type="string id"/>
+    </element>
+    <element index="42" name="damnation_cave">
+        <field name="name" value="damnation_cave" type="string id"/>
+    </element>
+    <element index="43" name="generic_lift_center">
+        <field name="name" value="generic_lift_center" type="string id"/>
+    </element>
+    <element index="44" name="aftship_uppermid">
+        <field name="name" value="aftship_uppermid" type="string id"/>
+    </element>
+    <element index="45" name="aftship_curvedhall">
+        <field name="name" value="aftship_curvedhall" type="string id"/>
+    </element>
+    <element index="46" name="medium_center">
+        <field name="name" value="medium_center" type="string id"/>
+    </element>
+    <element index="47" name="invasion_chasm">
+        <field name="name" value="invasion_chasm" type="string id"/>
+    </element>
+    <element index="48" name="medium_rockyside">
+        <field name="name" value="medium_rockyside" type="string id"/>
+    </element>
+    <element index="49" name="medium_cliffs">
+        <field name="name" value="medium_cliffs" type="string id"/>
+    </element>
+    <element index="50" name="forge_halo_name">
+        <field name="name" value="forge_halo_name" type="string id"/>
+    </element>
+    <element index="51" name="forge_arena_name">
+        <field name="name" value="forge_arena_name" type="string id"/>
+    </element>
+    <element index="52" name="condemned_communications">
+        <field name="name" value="condemned_communications" type="string id"/>
+    </element>
+    <element index="53" name="generic_weapon_concussion">
+        <field name="name" value="generic_weapon_concussion" type="string id"/>
+    </element>
+    <element index="54" name="headlong_construction_1st_floor">
+        <field name="name" value="headlong_construction_1st_floor" type="string id"/>
+    </element>
+    <element index="55" name="headlong_construction_2nd_floor">
+        <field name="name" value="headlong_construction_2nd_floor" type="string id"/>
+    </element>
+    <element index="56" name="headlong_construction_3rd_floor">
+        <field name="name" value="headlong_construction_3rd_floor" type="string id"/>
+    </element>
+    <element index="57" name="headlong_construction_bridge">
+        <field name="name" value="headlong_construction_bridge" type="string id"/>
+    </element>
+    <element index="58" name="headlong_construction_scaffolding">
+        <field name="name" value="headlong_construction_scaffolding" type="string id"/>
+    </element>
+    <element index="59" name="headlong_construction_stairwell">
+        <field name="name" value="headlong_construction_stairwell" type="string id"/>
+    </element>
+    <element index="60" name="damnation_control_room">
+        <field name="name" value="damnation_control_room" type="string id"/>
+    </element>
+    <element index="61" name="ff_unearthed_conveyor">
+        <field name="name" value="ff_unearthed_conveyor" type="string id"/>
+    </element>
+    <element index="62" name="boneyard_inv_corecase">
+        <field name="name" value="boneyard_inv_corecase" type="string id"/>
+    </element>
+    <element index="63" name="panoptical_courtyard">
+        <field name="name" value="panoptical_courtyard" type="string id"/>
+    </element>
+    <element index="64" name="ff_unearthed_crane">
+        <field name="name" value="ff_unearthed_crane" type="string id"/>
+    </element>
+    <element index="65" name="trainingpreserve_pelican">
+        <field name="name" value="trainingpreserve_pelican" type="string id"/>
+    </element>
+    <element index="66" name="island_crater">
+        <field name="name" value="island_crater" type="string id"/>
+    </element>
+    <element index="67" name="medium_creek">
+        <field name="name" value="medium_creek" type="string id"/>
+    </element>
+    <element index="68" name="powerhouse_dorm">
+        <field name="name" value="powerhouse_dorm" type="string id"/>
+    </element>
+    <element index="69" name="ff_unearthed_eastgate">
+        <field name="name" value="ff_unearthed_eastgate" type="string id"/>
+    </element>
+    <element index="70" name="halo_east_ramp">
+        <field name="name" value="halo_east_ramp" type="string id"/>
+    </element>
+    <element index="71" name="ivorytower_eastview">
+        <field name="name" value="ivorytower_eastview" type="string id"/>
+    </element>
+    <element index="72" name="swordbase_elbow">
+        <field name="name" value="swordbase_elbow" type="string id"/>
+    </element>
+    <element index="73" name="ivorytower_elevatorshaft">
+        <field name="name" value="ivorytower_elevatorshaft" type="string id"/>
+    </element>
+    <element index="74" name="ivorytower_servicelift">
+        <field name="name" value="ivorytower_servicelift" type="string id"/>
+    </element>
+    <element index="75" name="generic_weapon_sword">
+        <field name="name" value="generic_weapon_sword" type="string id"/>
+    </element>
+    <element index="76" name="ivorytower_entrance">
+        <field name="name" value="ivorytower_entrance" type="string id"/>
+    </element>
+    <element index="77" name="ff_unearthed_excavation">
+        <field name="name" value="ff_unearthed_excavation" type="string id"/>
+    </element>
+    <element index="78" name="aftship_exit">
+        <field name="name" value="aftship_exit" type="string id"/>
+    </element>
+    <element index="79" name="boneyard_inv_escape">
+        <field name="name" value="boneyard_inv_escape" type="string id"/>
+    </element>
+    <element index="80" name="ff_unearthed_facility">
+        <field name="name" value="ff_unearthed_facility" type="string id"/>
+    </element>
+    <element index="81" name="halo_field">
+        <field name="name" value="halo_field" type="string id"/>
+    </element>
+    <element index="82" name="generic_weapon_focus">
+        <field name="name" value="generic_weapon_focus" type="string id"/>
+    </element>
+    <element index="83" name="headlong_footbridge">
+        <field name="name" value="headlong_footbridge" type="string id"/>
+    </element>
+    <element index="84" name="invasion_4runner">
+        <field name="name" value="invasion_4runner" type="string id"/>
+    </element>
+    <element index="85" name="medium_wetbase">
+        <field name="name" value="medium_wetbase" type="string id"/>
+    </element>
+    <element index="86" name="medium_wet_pertunnel">
+        <field name="name" value="medium_wet_pertunnel" type="string id"/>
+    </element>
+    <element index="87" name="medium_wetrocks">
+        <field name="name" value="medium_wetrocks" type="string id"/>
+    </element>
+    <element index="88" name="medium_wettunnel">
+        <field name="name" value="medium_wettunnel" type="string id"/>
+    </element>
+    <element index="89" name="medium_wetwalkway">
+        <field name="name" value="medium_wetwalkway" type="string id"/>
+    </element>
+    <element index="90" name="invasion_front">
+        <field name="name" value="invasion_front" type="string id"/>
+    </element>
+    <element index="91" name="ff_unearthed_fuel">
+        <field name="name" value="ff_unearthed_fuel" type="string id"/>
+    </element>
+    <element index="92" name="halo_gateway">
+        <field name="name" value="halo_gateway" type="string id"/>
+    </element>
+    <element index="93" name="condemned_generatordeck">
+        <field name="name" value="condemned_generatordeck" type="string id"/>
+    </element>
+    <element index="94" name="condemned_generator">
+        <field name="name" value="condemned_generator" type="string id"/>
+    </element>
+    <element index="95" name="generic_weapon_hammer">
+        <field name="name" value="generic_weapon_hammer" type="string id"/>
+    </element>
+    <element index="96" name="generic_lift">
+        <field name="name" value="generic_lift" type="string id"/>
+    </element>
+    <element index="97" name="generic_lift_green">
+        <field name="name" value="generic_lift_green" type="string id"/>
+    </element>
+    <element index="98" name="generic_weapon_nadelauncher">
+        <field name="name" value="generic_weapon_nadelauncher" type="string id"/>
+    </element>
+    <element index="99" name="prisoner_ground_floor">
+        <field name="name" value="prisoner_ground_floor" type="string id"/>
+    </element>
+    <element index="100" name="boneyard_refinery_hall">
+        <field name="name" value="boneyard_refinery_hall" type="string id"/>
+    </element>
+    <element index="101" name="slayer_hangar">
+        <field name="name" value="slayer_hangar" type="string id"/>
+    </element>
+    <element index="102" name="invasion_helipad">
+        <field name="name" value="invasion_helipad" type="string id"/>
+    </element>
+    <element index="103" name="ivorytower_balcony">
+        <field name="name" value="ivorytower_balcony" type="string id"/>
+    </element>
+    <element index="104" name="swordbase_bridge_high">
+        <field name="name" value="swordbase_bridge_high" type="string id"/>
+    </element>
+    <element index="105" name="launchstation_highcatwalk">
+        <field name="name" value="launchstation_highcatwalk" type="string id"/>
+    </element>
+    <element index="106" name="aftship_highcenter">
+        <field name="name" value="aftship_highcenter" type="string id"/>
+    </element>
+    <element index="107" name="island_trail_back">
+        <field name="name" value="island_trail_back" type="string id"/>
+    </element>
+    <element index="108" name="swordbase_breakroom_vent">
+        <field name="name" value="swordbase_breakroom_vent" type="string id"/>
+    </element>
+    <element index="109" name="headlong_hotel_balcony">
+        <field name="name" value="headlong_hotel_balcony" type="string id"/>
+    </element>
+    <element index="110" name="headlong_hotel_lobby">
+        <field name="name" value="headlong_hotel_lobby" type="string id"/>
+    </element>
+    <element index="111" name="headlong_hotel">
+        <field name="name" value="headlong_hotel" type="string id"/>
+    </element>
+    <element index="112" name="forge_island_name">
+        <field name="name" value="forge_island_name" type="string id"/>
+    </element>
+    <element index="113" name="boneyard_junkyard">
+        <field name="name" value="boneyard_junkyard" type="string id"/>
+    </element>
+    <element index="114" name="swordbase_processing">
+        <field name="name" value="swordbase_processing" type="string id"/>
+    </element>
+    <element index="115" name="forge_lagoon_name">
+        <field name="name" value="forge_lagoon_name" type="string id"/>
+    </element>
+    <element index="116" name="halo_landslide">
+        <field name="name" value="halo_landslide" type="string id"/>
+    </element>
+    <element index="117" name="launchstation_launchpad">
+        <field name="name" value="launchstation_launchpad" type="string id"/>
+    </element>
+    <element index="118" name="swordbase_collider2">
+        <field name="name" value="swordbase_collider2" type="string id"/>
+    </element>
+    <element index="119" name="prisoner_lift_room">
+        <field name="name" value="prisoner_lift_room" type="string id"/>
+    </element>
+    <element index="120" name="boneyard_refinery_garage">
+        <field name="name" value="boneyard_refinery_garage" type="string id"/>
+    </element>
+    <element index="121" name="swordbase_lobby">
+        <field name="name" value="swordbase_lobby" type="string id"/>
+    </element>
+    <element index="122" name="powerhouse_staffroom_lockers">
+        <field name="name" value="powerhouse_staffroom_lockers" type="string id"/>
+    </element>
+    <element index="123" name="hang_long_ramp">
+        <field name="name" value="hang_long_ramp" type="string id"/>
+    </element>
+    <element index="124" name="swordbase_bridge_low">
+        <field name="name" value="swordbase_bridge_low" type="string id"/>
+    </element>
+    <element index="125" name="ivorytower_easthall">
+        <field name="name" value="ivorytower_easthall" type="string id"/>
+    </element>
+    <element index="126" name="boneyard_road">
+        <field name="name" value="boneyard_road" type="string id"/>
+    </element>
+    <element index="127" name="timberland_lower_blue_base">
+        <field name="name" value="timberland_lower_blue_base" type="string id"/>
+    </element>
+    <element index="128" name="damnation_lower_bridge">
+        <field name="name" value="damnation_lower_bridge" type="string id"/>
+    </element>
+    <element index="129" name="hang_lower_catwalk">
+        <field name="name" value="hang_lower_catwalk" type="string id"/>
+    </element>
+    <element index="130" name="halo_lower_entrance">
+        <field name="name" value="halo_lower_entrance" type="string id"/>
+    </element>
+    <element index="131" name="ff_unearthed_gully">
+        <field name="name" value="ff_unearthed_gully" type="string id"/>
+    </element>
+    <element index="132" name="prisoner_lower_ramp">
+        <field name="name" value="prisoner_lower_ramp" type="string id"/>
+    </element>
+    <element index="133" name="timberland_lower_red_base">
+        <field name="name" value="timberland_lower_red_base" type="string id"/>
+    </element>
+    <element index="134" name="headlong_lower_terrace">
+        <field name="name" value="headlong_lower_terrace" type="string id"/>
+    </element>
+    <element index="135" name="invasion_tunnel_2">
+        <field name="name" value="invasion_tunnel_2" type="string id"/>
+    </element>
+    <element index="136" name="ff_unearthed_maintenance">
+        <field name="name" value="ff_unearthed_maintenance" type="string id"/>
+    </element>
+    <element index="137" name="generic_mancannon">
+        <field name="name" value="generic_mancannon" type="string id"/>
+    </element>
+    <element index="138" name="swordbase_bridge_medium">
+        <field name="name" value="swordbase_bridge_medium" type="string id"/>
+    </element>
+    <element index="139" name="launchstation_midcatwalk">
+        <field name="name" value="launchstation_midcatwalk" type="string id"/>
+    </element>
+    <element index="140" name="boneyard_approach_mid">
+        <field name="name" value="boneyard_approach_mid" type="string id"/>
+    </element>
+    <element index="141" name="island_road_middle">
+        <field name="name" value="island_road_middle" type="string id"/>
+    </element>
+    <element index="142" name="prisoner_monolith">
+        <field name="name" value="prisoner_monolith" type="string id"/>
+    </element>
+    <element index="143" name="forge_montana_name">
+        <field name="name" value="forge_montana_name" type="string id"/>
+    </element>
+    <element index="144" name="headlong_monument">
+        <field name="name" value="headlong_monument" type="string id"/>
+    </element>
+    <element index="145" name="trainingpreserve_motorpool">
+        <field name="name" value="trainingpreserve_motorpool" type="string id"/>
+    </element>
+    <element index="146" name="invasion_nook">
+        <field name="name" value="invasion_nook" type="string id"/>
+    </element>
+    <element index="147" name="beavercreek_north_perch">
+        <field name="name" value="beavercreek_north_perch" type="string id"/>
+    </element>
+    <element index="148" name="timberland_north_ridge">
+        <field name="name" value="timberland_north_ridge" type="string id"/>
+    </element>
+    <element index="149" name="condemned_observationdeck">
+        <field name="name" value="condemned_observationdeck" type="string id"/>
+    </element>
+    <element index="150" name="panoptical_oceanview">
+        <field name="name" value="panoptical_oceanview" type="string id"/>
+    </element>
+    <element index="151" name="headlong_ocean_wall">
+        <field name="name" value="headlong_ocean_wall" type="string id"/>
+    </element>
+    <element index="152" name="headlong_office_1st_floor">
+        <field name="name" value="headlong_office_1st_floor" type="string id"/>
+    </element>
+    <element index="153" name="headlong_office_2nd_floor">
+        <field name="name" value="headlong_office_2nd_floor" type="string id"/>
+    </element>
+    <element index="154" name="headlong_office_3rd_floor">
+        <field name="name" value="headlong_office_3rd_floor" type="string id"/>
+    </element>
+    <element index="155" name="swordbase_controlcenter">
+        <field name="name" value="swordbase_controlcenter" type="string id"/>
+    </element>
+    <element index="156" name="generic_lift_orange">
+        <field name="name" value="generic_lift_orange" type="string id"/>
+    </element>
+    <element index="157" name="aftship_lift_orange">
+        <field name="name" value="aftship_lift_orange" type="string id"/>
+    </element>
+    <element index="158" name="timberland_outer_blue_base">
+        <field name="name" value="timberland_outer_blue_base" type="string id"/>
+    </element>
+    <element index="159" name="hang_ounter_catwalk">
+        <field name="name" value="hang_ounter_catwalk" type="string id"/>
+    </element>
+    <element index="160" name="timberland_outer_red_base">
+        <field name="name" value="timberland_outer_red_base" type="string id"/>
+    </element>
+    <element index="161" name="halo_overlook">
+        <field name="name" value="halo_overlook" type="string id"/>
+    </element>
+    <element index="162" name="forge_ascension_name">
+        <field name="name" value="forge_ascension_name" type="string id"/>
+    </element>
+    <element index="163" name="generic_weapon_launcher">
+        <field name="name" value="generic_weapon_launcher" type="string id"/>
+    </element>
+    <element index="164" name="medium_power">
+        <field name="name" value="medium_power" type="string id"/>
+    </element>
+    <element index="165" name="damnation_pump_room">
+        <field name="name" value="damnation_pump_room" type="string id"/>
+    </element>
+    <element index="166" name="forge_sanctuary_name">
+        <field name="name" value="forge_sanctuary_name" type="string id"/>
+    </element>
+    <element index="167" name="trainingpreserve_radiotower">
+        <field name="name" value="trainingpreserve_radiotower" type="string id"/>
+    </element>
+    <element index="168" name="damnation_rafters">
+        <field name="name" value="damnation_rafters" type="string id"/>
+    </element>
+    <element index="169" name="beavercreek_red_base">
+        <field name="name" value="beavercreek_red_base" type="string id"/>
+    </element>
+    <element index="170" name="hang_red_bunker">
+        <field name="name" value="hang_red_bunker" type="string id"/>
+    </element>
+    <element index="171" name="aftship_liftroom_red">
+        <field name="name" value="aftship_liftroom_red" type="string id"/>
+    </element>
+    <element index="172" name="aftship_curvedhall_red">
+        <field name="name" value="aftship_curvedhall_red" type="string id"/>
+    </element>
+    <element index="173" name="timberland_red_encampment">
+        <field name="name" value="timberland_red_encampment" type="string id"/>
+    </element>
+    <element index="174" name="generic_lift_red">
+        <field name="name" value="generic_lift_red" type="string id"/>
+    </element>
+    <element index="175" name="aftship_hallway_red">
+        <field name="name" value="aftship_hallway_red" type="string id"/>
+    </element>
+    <element index="176" name="prisoner_red_loft">
+        <field name="name" value="prisoner_red_loft" type="string id"/>
+    </element>
+    <element index="177" name="generic_mancannon_red">
+        <field name="name" value="generic_mancannon_red" type="string id"/>
+    </element>
+    <element index="178" name="aftship_redplatform">
+        <field name="name" value="aftship_redplatform" type="string id"/>
+    </element>
+    <element index="179" name="prisoner_red_ramp">
+        <field name="name" value="prisoner_red_ramp" type="string id"/>
+    </element>
+    <element index="180" name="beavercreek_red_roof">
+        <field name="name" value="beavercreek_red_roof" type="string id"/>
+    </element>
+    <element index="181" name="generic_hive_red">
+        <field name="name" value="generic_hive_red" type="string id"/>
+    </element>
+    <element index="182" name="beavercreek_red_teleporter">
+        <field name="name" value="beavercreek_red_teleporter" type="string id"/>
+    </element>
+    <element index="183" name="trainingpreserve_redtower">
+        <field name="name" value="trainingpreserve_redtower" type="string id"/>
+    </element>
+    <element index="184" name="hang_red_tunnels">
+        <field name="name" value="hang_red_tunnels" type="string id"/>
+    </element>
+    <element index="185" name="boneyard_refinery1">
+        <field name="name" value="boneyard_refinery1" type="string id"/>
+    </element>
+    <element index="186" name="boneyard_refinery2">
+        <field name="name" value="boneyard_refinery2" type="string id"/>
+    </element>
+    <element index="187" name="boneyard_refinery3">
+        <field name="name" value="boneyard_refinery3" type="string id"/>
+    </element>
+    <element index="188" name="boneyard_refinery_entrance">
+        <field name="name" value="boneyard_refinery_entrance" type="string id"/>
+    </element>
+    <element index="189" name="boneyard_refinery_roof">
+        <field name="name" value="boneyard_refinery_roof" type="string id"/>
+    </element>
+    <element index="190" name="boneyard_refinery">
+        <field name="name" value="boneyard_refinery" type="string id"/>
+    </element>
+    <element index="191" name="condemned_repair">
+        <field name="name" value="condemned_repair" type="string id"/>
+    </element>
+    <element index="192" name="invasion_station">
+        <field name="name" value="invasion_station" type="string id"/>
+    </element>
+    <element index="193" name="powerhouse_ridge">
+        <field name="name" value="powerhouse_ridge" type="string id"/>
+    </element>
+    <element index="194" name="ff_unearthed_road">
+        <field name="name" value="ff_unearthed_road" type="string id"/>
+    </element>
+    <element index="195" name="beavercreek_rock_arch">
+        <field name="name" value="beavercreek_rock_arch" type="string id"/>
+    </element>
+    <element index="196" name="medium_rockfort">
+        <field name="name" value="medium_rockfort" type="string id"/>
+    </element>
+    <element index="197" name="powerhouse_rockgarden">
+        <field name="name" value="powerhouse_rockgarden" type="string id"/>
+    </element>
+    <element index="198" name="generic_weapon_rocket">
+        <field name="name" value="generic_weapon_rocket" type="string id"/>
+    </element>
+    <element index="199" name="medium_drybase">
+        <field name="name" value="medium_drybase" type="string id"/>
+    </element>
+    <element index="200" name="medium_dry_pertunnel">
+        <field name="name" value="medium_dry_pertunnel" type="string id"/>
+    </element>
+    <element index="201" name="medium_drytunnel">
+        <field name="name" value="medium_drytunnel" type="string id"/>
+    </element>
+    <element index="202" name="medium_drywalkway">
+        <field name="name" value="medium_drywalkway" type="string id"/>
+    </element>
+    <element index="203" name="ff_unearthed_roof">
+        <field name="name" value="ff_unearthed_roof" type="string id"/>
+    </element>
+    <element index="204" name="slayer_sabre">
+        <field name="name" value="slayer_sabre" type="string id"/>
+    </element>
+    <element index="205" name="forge_ocean_name">
+        <field name="name" value="forge_ocean_name" type="string id"/>
+    </element>
+    <element index="206" name="prisoner_security_platform">
+        <field name="name" value="prisoner_security_platform" type="string id"/>
+    </element>
+    <element index="207" name="swordbase_server_room">
+        <field name="name" value="swordbase_server_room" type="string id"/>
+    </element>
+    <element index="208" name="powerhouse_shed">
+        <field name="name" value="powerhouse_shed" type="string id"/>
+    </element>
+    <element index="209" name="boneyard_ship">
+        <field name="name" value="boneyard_ship" type="string id"/>
+    </element>
+    <element index="210" name="boneyard_refinery_shop">
+        <field name="name" value="boneyard_refinery_shop" type="string id"/>
+    </element>
+    <element index="211" name="generic_weapon_shotgun">
+        <field name="name" value="generic_weapon_shotgun" type="string id"/>
+    </element>
+    <element index="212" name="panoptical_skybridge">
+        <field name="name" value="panoptical_skybridge" type="string id"/>
+    </element>
+    <element index="213" name="generic_lift_small">
+        <field name="name" value="generic_lift_small" type="string id"/>
+    </element>
+    <element index="214" name="generic_sniper_plat">
+        <field name="name" value="generic_sniper_plat" type="string id"/>
+    </element>
+    <element index="215" name="generic_weapon_sniper">
+        <field name="name" value="generic_weapon_sniper" type="string id"/>
+    </element>
+    <element index="216" name="beavercreek_south_perch">
+        <field name="name" value="beavercreek_south_perch" type="string id"/>
+    </element>
+    <element index="217" name="timberland_south_ridge">
+        <field name="name" value="timberland_south_ridge" type="string id"/>
+    </element>
+    <element index="218" name="aftship_space">
+        <field name="name" value="aftship_space" type="string id"/>
+    </element>
+    <element index="219" name="generic_weapon_laser">
+        <field name="name" value="generic_weapon_laser" type="string id"/>
+    </element>
+    <element index="220" name="powerhouse_spillway">
+        <field name="name" value="powerhouse_spillway" type="string id"/>
+    </element>
+    <element index="221" name="condemned_stairwell">
+        <field name="name" value="condemned_stairwell" type="string id"/>
+    </element>
+    <element index="222" name="swordbase_attic">
+        <field name="name" value="swordbase_attic" type="string id"/>
+    </element>
+    <element index="223" name="ff_unearthed_street">
+        <field name="name" value="ff_unearthed_street" type="string id"/>
+    </element>
+    <element index="224" name="damnation_teleporter_overlook">
+        <field name="name" value="damnation_teleporter_overlook" type="string id"/>
+    </element>
+    <element index="225" name="damnation_teleporter_room">
+        <field name="name" value="damnation_teleporter_room" type="string id"/>
+    </element>
+    <element index="226" name="forge_island_rock">
+        <field name="name" value="forge_island_rock" type="string id"/>
+    </element>
+    <element index="227" name="condemned_tram">
+        <field name="name" value="condemned_tram" type="string id"/>
+    </element>
+    <element index="228" name="hang_trench">
+        <field name="name" value="hang_trench" type="string id"/>
+    </element>
+    <element index="229" name="headlong_underpass">
+        <field name="name" value="headlong_underpass" type="string id"/>
+    </element>
+    <element index="230" name="timberland_upper_blue_base">
+        <field name="name" value="timberland_upper_blue_base" type="string id"/>
+    </element>
+    <element index="231" name="damnation_upper_bridge">
+        <field name="name" value="damnation_upper_bridge" type="string id"/>
+    </element>
+    <element index="232" name="hang_upper_catwalk">
+        <field name="name" value="hang_upper_catwalk" type="string id"/>
+    </element>
+    <element index="233" name="panoptical_plaza">
+        <field name="name" value="panoptical_plaza" type="string id"/>
+    </element>
+    <element index="234" name="halo_upper_deck">
+        <field name="name" value="halo_upper_deck" type="string id"/>
+    </element>
+    <element index="235" name="prisoner_upper_ramp">
+        <field name="name" value="prisoner_upper_ramp" type="string id"/>
+    </element>
+    <element index="236" name="timberland_upper_red_base">
+        <field name="name" value="timberland_upper_red_base" type="string id"/>
+    </element>
+    <element index="237" name="headlong_upper_terrace">
+        <field name="name" value="headlong_upper_terrace" type="string id"/>
+    </element>
+    <element index="238" name="invasion_tunnel_1">
+        <field name="name" value="invasion_tunnel_1" type="string id"/>
+    </element>
+    <element index="239" name="invasion_vault">
+        <field name="name" value="invasion_vault" type="string id"/>
+    </element>
+    <element index="240" name="invasion_bay">
+        <field name="name" value="invasion_bay" type="string id"/>
+    </element>
+    <element index="241" name="launchstation_vent">
+        <field name="name" value="launchstation_vent" type="string id"/>
+    </element>
+    <element index="242" name="ivorytower_walkway">
+        <field name="name" value="ivorytower_walkway" type="string id"/>
+    </element>
+    <element index="243" name="medium_water">
+        <field name="name" value="medium_water" type="string id"/>
+    </element>
+    <element index="244" name="trainingpreserve_waterfall">
+        <field name="name" value="trainingpreserve_waterfall" type="string id"/>
+    </element>
+    <element index="245" name="generic_invasion_weapondrop">
+        <field name="name" value="generic_invasion_weapondrop" type="string id"/>
+    </element>
+    <element index="246" name="ff_unearthed_westgate">
+        <field name="name" value="ff_unearthed_westgate" type="string id"/>
+    </element>
+    <element index="247" name="halo_west_ramp">
+        <field name="name" value="halo_west_ramp" type="string id"/>
+    </element>
+    <element index="248" name="ivorytower_westview">
+        <field name="name" value="ivorytower_westview" type="string id"/>
+    </element>
+    <element index="249" name="medium_longsword">
+        <field name="name" value="medium_longsword" type="string id"/>
+    </element>
+    <element index="250" name="powerhouse_transformers">
+        <field name="name" value="powerhouse_transformers" type="string id"/>
+    </element>
+    <element index="251" name="swordbase_collider">
+        <field name="name" value="swordbase_collider" type="string id"/>
+    </element>
+    <element index="252" name="prisoner_2nd_floor">
+        <field name="name" value="prisoner_2nd_floor" type="string id"/>
+    </element>
+    <element index="253" name="prisoner_3rd_floor">
+        <field name="name" value="prisoner_3rd_floor" type="string id"/>
+    </element>
+    <element index="254" name="prisoner_4th_floor">
+        <field name="name" value="prisoner_4th_floor" type="string id"/>
+    </element>
+    <field name="location name string list" value="forge_strings" type="tag reference"/>
+</tag>

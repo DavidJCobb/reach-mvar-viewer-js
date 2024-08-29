@@ -1,0 +1,720 @@
+<!doctype html>
+<html>
+   <head>
+      <!-- zlib: -->
+      <script src="third-party/pako/pako.js"></script>
+      
+      <script src="devtools-formatter.js"></script>
+      <script src="parse-foundation-exported-xml.js"></script>
+      
+      <script src="vec3.js"></script>
+      
+      <script src="maps.js"></script>
+      <script src="teams.js"></script>
+      
+      <script src="forge-rotation.js"></script>
+      
+      <script src="utils.js"></script>
+      <script src="bitstream.js"></script>
+      <script src="bitnumber.js"></script>
+      
+      <script src="variant-content-author.js"></script>
+      <script src="blam-block-_blf.js"></script>
+      <script src="blam-block-chdr.js"></script>
+      <script src="map_variant_mvar.js"></script>
+      
+      <!-- custom elements -->
+      <script src="forge-object-dot.js"></script>
+      
+      <style>
+html {
+   padding: 0;
+   margin:  0;
+}
+body {
+   display:    grid;
+   grid-template:
+      "load"
+      "metadata"
+      "objects" 1fr
+   ;
+   
+   height:     100vh;
+   box-sizing: border-box;
+   
+   padding: .25em;
+   margin:  0;
+   
+   &>section.load {
+   }
+   &>#mvar-metadata {
+   }
+   &>#objects-overview {
+      /* needed to prefer scrollbars on this rather than on the body */
+      min-width:  0;
+      min-height: 0;
+   }
+}
+      
+#mvar-metadata {
+   display: grid;
+   grid-template-columns: min-content 1fr;
+   gap: .25em;
+   
+   &:not(:empty) {
+      border: 1px solid #CCC;
+      padding: .25em;
+   }
+   
+   &>:is(dt, dd) {
+      padding: .25em .5em;
+      margin:  0;
+      background: #CCC;
+   }
+   &>dt {
+      font-weight: bold;
+      white-space: nowrap;
+   }
+   &>dd {
+   }
+}
+
+#objects-overview {
+   display:   flex;
+   flex-flow: row nowrap;
+   
+   .map-view {
+      display:   flex;
+      flex-flow: column nowrap;
+      
+      #map-zoom-clip {
+         flex:     1 1 auto;
+         overflow: auto;
+         
+         #map-zoom-wrap {
+            scale: 1;
+            transform-origin: top left;
+            
+            #map {
+            }
+         }
+      }
+   }
+   .object-listing {
+      flex: 1 1 auto;
+      max-height: 100%;
+      
+      display:   flex;
+      flex-flow: column nowrap;
+      gap:       .25em;
+      
+      /* needed to prefer scrollbars on descendant nodes rather than self or on the body */
+      min-width:  0;
+      min-height: 0;
+      &>* {
+         flex: 0 0 auto;
+      }
+      &>.table-wrap {
+         flex: 1 1 auto;
+      }
+      
+      .filter-options {
+         display: flex;
+         flex-flow: row nowrap;
+         list-style: none;
+         padding: 0 0 .25em 0; /* cancel default list spacing BUT add space between buttons and h-scrollbar */
+         margin: 0;
+         gap: .25em;
+         
+         overflow-x: auto;
+         
+         &>li {
+            label {
+            }
+            input {
+               all:        unset;
+               appearance: none;
+               
+               display: block;
+               padding: .25em .5em;
+               margin:  0;
+               background: #CCC;
+               
+               &::before {
+                  content: attr(aria-label);
+                  white-space: nowrap;
+               }
+               
+               &:checked {
+                  background: #FCA;
+               }
+            }
+         }
+      }
+      
+      .table-wrap {
+         overflow-y: auto;
+         
+         #object-table {
+            width: 100%;
+            
+            border-spacing: 2px;
+            margin: -2px;
+         
+            th,td {
+               padding: .25em .5em;
+            }
+            th {
+               background: #CCC;
+               text-align: left;
+            }
+            td {
+               background: #E8E8E8;
+            }
+            th:nth-child(2) { width: 10em }
+            
+            tr:focus td {
+               background:#FFCCAA;
+            }
+         }
+      }
+   }
+}
+
+#map {
+   position: relative;
+   min-width: 500px;
+   min-height: 500px;
+   overflow: auto;
+   
+   #named-locations-map,
+   #object-dots-map {
+      position: absolute;
+      inset:    0;
+   }
+   
+   #named-locations-map {
+      path {
+         fill: rgba(0, 0, 0, 0.1);
+         stroke: #000;
+         stroke-width: calc(1px / var(--zoom, 1));
+      }
+   }
+}
+
+forge-object-dot {
+   --dot-size: 4px;
+   
+   --effective-dot-size: calc(var(--dot-size) / var(--zoom, 1));
+
+   position: absolute;
+   width:  var(--effective-dot-size);
+   height: var(--effective-dot-size);
+   border-radius: 50%;
+   
+   color: #00F;
+   background: currentColor;
+   
+   &[selected] {
+      color: #F00;
+      z-index:100;
+   }
+   
+   &>.shape {
+      position: absolute;
+      left:     50%;
+      top:      50%;
+      transform: translate(-50%, -50%);
+      
+      /*
+         BUG: Web browsers are dumb and refuse to render borders thinner than 
+              1px... but by that I mean 1px before any CSS scaling is applied. 
+              If you set an element's scale to 2, then its minimum border width 
+              is 2px on-screen; and so on. We're going to need a whole-ass SVG 
+              just so we can scale some circles without their line widths being 
+              set to wumbo.
+      */
+      border: calc(1px / var(--zoom, 1)) solid currentColor;
+      
+      &.circle {
+         width:  calc(var(--radius) * 2px);
+         height: calc(var(--radius) * 2px);
+         border-radius: 50%;
+      }
+   }
+}
+      </style>
+   </head>
+   <body>
+      <section class="load">
+         <input type="file" id="mvar-file" />
+         <input type="button" id="read" value="Read" />
+      </section>
+      <dl id="mvar-metadata"></dl>
+      <div id="objects-overview">
+         <div class="map-view">
+            <div>
+               <label>Zoom: <input id="zoom-slider" type="range" min="1" max="10" value="1" step="0.1" /></label>
+            </div>
+            <div id="map-zoom-clip">
+               <div id="map-zoom-wrap">
+                  <div id="map">
+                     <svg id="named-locations-map"></svg>
+                     <div id="object-dots-map"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="object-listing">
+            <ul class="filter-options filter-by-palette">
+               <li>
+                  <label><input checked type="checkbox" aria-label="Human weapons" data-filter="ff_weapons_human" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Covenant weapons" data-filter="ff_weapons_covenant" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Armor Abilities" data-filter="ff_armor_abilities" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Vehicles" data-filter="ff_vehicles" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Gadgets" data-filter="ff_gadgets" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Spawning" data-filter="ff_spawning" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Objectives" data-filter="ff_objectives" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Scenery" data-filter="ff_scenery" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Structure" data-filter="ff_structure" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Hidden (Invisible Walls?)" data-filter="structure_blocks" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Vehicles (Thorage)" data-filter="ff_thorage_vehicles" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Gadgets (Thorage)" data-filter="ff_thorage_gadgets" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Scenery (Thorage)" data-filter="ff_thorage_scenery" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Structure (Thorage)" data-filter="ff_thorage_structure" /></label>
+               </li>
+               <li>
+                  <label><input checked type="checkbox" aria-label="Hidden (Thorage)" data-filter="ff_thorage_hidden" /></label>
+               </li>
+            </ul>
+            <ul class="filter-options filter-by-data">
+               <li>
+                  <label><input type="checkbox" aria-label="Require Forge Label" data-filter="has-forge-label" /></label>
+               </li>
+            </ul>
+            <div class="table-wrap">
+               <table id="object-table">
+                  <thead>
+                     <tr>
+                        <th>#</th>
+                        <th>Object Type</th>
+                        <th><abbr title="Flattened object category">OC</abbr></th>
+                        <th><abbr title="Object type within category">OT</abbr></th>
+                        <th>Label</th>
+                        <th>Team</th>
+                        <th><abbr title="Spawn Sequence">Sp. Sq.</abbr></th>
+                        <th><abbr title="Gametype-Specific">GS</abbr></th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script>
+{
+   let node = document.getElementById("zoom-slider");
+   node.value = 1;
+   node.addEventListener("change", function(e) {
+      let clip  = document.getElementById("map-zoom-clip");
+      let node  = document.getElementById("map-zoom-wrap");
+      
+      let value = e.target.value;
+      let prior = +node.style.scale || 1;
+      
+      let halfwidth  = clip.offsetWidth / 2;
+      let halfheight = clip.offsetHeight / 2;
+      
+      let center_x = clip.scrollLeft + halfwidth;
+      let center_y = clip.scrollTop  + halfheight;
+      
+      node.style.scale = value;
+      node.style.setProperty("--zoom", value);
+      {
+         let change = value / prior;
+         center_x *= change;
+         center_y *= change;
+         clip.scrollLeft = center_x - halfwidth;
+         clip.scrollTop  = center_y - halfheight;
+      }
+   });
+}
+
+document.getElementById("object-table").addEventListener("focusin", function(e) {
+   let node = e.target.closest("#object-table tr");
+   if (!node)
+      return;
+   if (!node.dot_node)
+      return;
+   
+   let selected = document.querySelector("#object-dots-map [selected]");
+   if (selected)
+      selected.removeAttribute("selected");
+   node.dot_node.setAttribute("selected", "selected");
+});
+
+function update_object_list_filter_state() {
+   let hidden = [];
+   {
+      document.querySelectorAll(".filter-by-palette input[type='checkbox' i][data-filter]").forEach(function(node) {
+         if (node.checked)
+            return;
+         hidden.push(node.getAttribute("data-filter"));
+      });
+   }
+   
+   let show_only_labeled = document.querySelector(".filter-by-data [data-filter=has-forge-label]").checked;
+   
+   document.querySelectorAll("#object-table tr[data-palette-folder]").forEach(function(tr) {
+      let folder  = tr.getAttribute("data-palette-folder");
+      let labeled = tr.getAttribute("data-forge-label");
+      
+      let show = true;
+      if (show_only_labeled && !labeled) {
+         show = false;
+      } else {
+         show = !hidden.includes(folder);
+      }
+      
+      if (!show) {
+         tr.setAttribute("hidden", "hidden");
+      } else {
+         tr.removeAttribute("hidden");
+      }
+      
+   });
+}
+document.querySelector(".filter-by-palette").addEventListener("change", function(e) {
+   let node = e.target.closest("input[type='checkbox' i][data-filter]");
+   if (!node)
+      return;
+   update_object_list_filter_state();
+});
+document.querySelector(".filter-by-data").addEventListener("change", function(e) {
+   let node = e.target.closest("input[type='checkbox' i][data-filter]");
+   if (!node)
+      return;
+   update_object_list_filter_state();
+});
+
+function render_metadata(/*MapVariant*/ variant) {
+   const MAP = REACH_MAPS.find(e => e.map_id == variant.mapID);
+   
+   let node = document.getElementById("mvar-metadata");
+   node.replaceChildren();
+   
+   let frag = new DocumentFragment();
+   
+   function _add_item(name, value, cls) {
+      let dt = document.createElement("dt");
+      let dd = document.createElement("dd");
+      dt.textContent = name;
+      dd.textContent = value;
+      frag.append(dt, dd);
+      if (cls) {
+         dd.classList.add(cls);
+      }
+   }
+   
+   let src = variant.header;
+   _add_item("Name", `${src.title}`);
+   _add_item("Description", `${src.description}`);
+   _add_item("Canvas ID", MAP ? MAP.name : `<unknown ${variant.mapID}>`);
+   _add_item("Created By", `${src.createdBy.author} (XUID: ${src.createdBy.xuid})`);
+   _add_item("Modified By", `${src.modifiedBy.author} (XUID: ${src.modifiedBy.xuid})`);
+   
+   node.replaceChildren(frag);
+}
+
+function get_thorage_location_names() {
+   let nl_src;
+   {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "thorage_multi_location_names.location_name_globals_definition.xml", false);
+      xhr.send(null);
+      
+      let doc = xhr.responseXML;
+      if (!doc || doc.querySelector("parsererror"))
+         return null;
+      nl_src = doc.documentElement;
+   }
+   if (!nl_src)
+      return null;
+   nl_src = parse_foundation_exported_xml(nl_src)["location names"];
+   if (!nl_src || !nl_src.elements)
+      return null;
+   return nl_src.elements.map(e => e.name);
+}
+
+function render_map(/*MapVariant*/ variant) {
+   const MAP = REACH_MAPS.find(e => e.map_id == variant.mapID);
+
+   let wrap = document.getElementById("map");
+   let svg  = document.getElementById("named-locations-map");
+   let dots = document.getElementById("object-dots-map");
+   svg.replaceChildren();
+   dots.replaceChildren();
+   
+   let min_extent = [0,0,0];
+   let max_extent = [0,0,0];
+   {
+      let locations = MAP.named_location_areas;
+      if (locations) {
+         for(let location of locations) {
+            let shape = document.createElementNS("http://www.w3.org/2000/svg", "path");
+            let d     = "";
+            for(point of location.points) {
+               let x = point[0];
+               let y = point[1];
+               
+               for(let i = 0; i < 3; ++i) {
+                  min_extent[i] = Math.min(point[i], min_extent[i]);
+                  max_extent[i] = Math.max(point[i], max_extent[i]);
+               }
+            
+               if (!d)
+                  d = "M ";
+               else
+                  d += " L ";
+               d += x + "," + y;
+            }
+            d += " Z";
+            shape.setAttribute("d", d);
+            shape.setAttribute("data-name", location.name);
+            shape.setAttribute("title", location.name);
+            svg.append(shape);
+         }
+         for(let i = 0; i < 3; ++i) {
+            let offset = -min_extent[i];
+            let size   = max_extent[i];
+            if (offset > 0)
+               size += offset;
+            
+            if (i == 0) {
+               svg.setAttribute("width", size);
+            } else if (i == 1) {
+               svg.setAttribute("height", size);
+            }
+         }
+         svg.setAttribute("viewBox", `${min_extent[0]} ${min_extent[1]} ${max_extent[0] - min_extent[0]} ${max_extent[1] - min_extent[1]}`);
+      } else {
+         //
+         // Last resort: set extents from the variant bounds, so that 
+         // we can at least show object locations.
+         //
+         for(let i = 0; i < 3; ++i) {
+            let axis = ("xyz")[i];
+            min_extent[i] = variant.boundingBox[axis].min;
+            max_extent[i] = variant.boundingBox[axis].max;
+            if (i == 1) { // negate Y
+               let a = -min_extent[i];
+               let b = -max_extent[i];
+               min_extent[i] = b;
+               max_extent[i] = a;
+            }
+         }
+      }
+   }
+   dots.style.left = `${-min_extent[0]}px`;
+   dots.style.top  = `${-min_extent[1]}px`;
+   {
+      let palette       = MAP.forge_palettes;
+      let thorage_names = get_thorage_location_names();
+      
+      let table = document.getElementById("object-table");
+      let tbody = table.querySelector("tbody");
+      tbody.replaceChildren();
+      
+      let tfrag = new DocumentFragment();
+      
+      for(let i = 0; i < variant.forgeObjects.length; ++i) {
+         let object = variant.forgeObjects[i];
+         if (!object.loaded)
+            continue;
+         let node = document.createElement("forge-object-dot");
+         let tr   = document.createElement("tr");
+         tr.setAttribute("tabindex", 0);
+         tr.dot_node = node;
+         tfrag.append(tr);
+         
+         node.raw_object_type   = object.objectTypeForgeFolderItem;
+         node.raw_object_subcat = object.objectTypeForgeFolder;
+         
+         if (object.extraData) {
+            node.gametype_specific = object.extraData.gametypeSpecific;
+            node.forge_label       = object.forgeLabel || null;
+            node.respawn_time      = object.extraData.respawnTime;
+            node.spawn_sequence    = object.extraData.spawnSequence;
+            
+            let team = object.extraData.team;
+            if (object.extraData.team >= 0)
+               node.team = object.extraData.team;
+            
+            if (object.extraData.color >= 0)
+               node.object_color = object.extraData.color;
+            
+            let shape_type = [null, "sphere", "cylinder", "box"][object.extraData.shapeType] || null;
+            if (shape_type) {
+               node.shape = {
+                  type: shape_type,
+               };
+               switch (shape_type) {
+                  case "sphere":
+                     node.shape.radius = object.extraData.shapeSizeRadius;
+                     break;
+                  case "cylinder":
+                     node.shape.radius = object.extraData.shapeSizeRadius;
+                     node.shape.top    = object.extraData.shapeSizeTop;
+                     node.shape.bottom = object.extraData.shapeSizeBottom;
+                     break;
+                  case "box":
+                     node.shape.width  = object.extraData.shapeSizeRadius;
+                     node.shape.length = object.extraData.shapeSizeLength;
+                     node.shape.top    = object.extraData.shapeSizeTop;
+                     node.shape.bottom = object.extraData.shapeSizeBottom;
+                     break;
+               }
+               node.update_shape_node();
+            }
+            
+            let channel = object.extraData.channel;
+            if (channel !== null)
+               node.channel = String.fromCharCode(("A").charCodeAt(0) + channel);
+            
+            let spare_clips = object.extraData.spareClips;
+            if (spare_clips !== null)
+               node.spare_clips = spare_clips;
+            
+            let location_name = object.extraData.locationName;
+            if (location_name !== null)
+               node.location_name = thorage_names[location_name];
+         }
+         
+         if (palette) {
+            let info = MAP.resolve_palette_information(object.objectTypeForgeFolder, object.objectTypeForgeFolderItem);
+            if (info) {
+               tr.setAttribute("data-palette-folder", info.palette.name);
+               if (info.item)
+                  node.object_name = info.item.object;
+            }
+         }
+         
+         node.style.left = `${object.position.x}px`;
+         node.style.top  = `${-object.position.y}px`;
+         dots.append(node);
+         
+         {
+            let td;
+            td = document.createElement("td");
+            td.append(i);
+            tr.append(td);
+            
+            td = document.createElement("td");
+            td.append(node.object_name || "<unknown>");
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.raw_object_subcat != null)
+               td.append(node.raw_object_subcat);
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.raw_object_type != null)
+               td.append(node.raw_object_type);
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.forge_label) {
+               td.append(node.forge_label);
+               tr.setAttribute("data-forge-label", node.forge_label);
+            }
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.team !== null)
+               td.append(REACH_TEAMS[node.team]?.name || node.team);
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.spawn_sequence !== null)
+               td.append(node.spawn_sequence);
+            tr.append(td);
+            
+            td = document.createElement("td");
+            if (node.gametype_specific)
+               td.append("\u2713");
+            tr.append(td);
+         }
+      }
+      tbody.append(tfrag);
+      update_object_list_filter_state();
+   }
+}
+
+document.getElementById("read").onclick = async function() {
+   let node = document.getElementById("mvar-file");
+   let file = node.files[0];
+   if (!file) {
+      console.warn("No file selected.");
+      return;
+   }
+   
+   globalThis.last_loaded_mvar = null;
+   
+   let buffer = await file.arrayBuffer();
+   //
+   let stream = new Bitstream(buffer);
+   let blocks = {};
+   blocks["_blf"] = new BlamBlockBlamHeader(stream);
+   blocks["chdr"] = new BlamBlockContentHeader(stream);
+   switch (blocks["chdr"].contentType) {
+      case blam_content_type.map_variant:
+         blocks["mvar"] = new MapVariant(stream);
+         break;
+      default:
+         {
+            let type = blocks["chdr"].contentType;
+            for(let key in gvar_content_type) {
+               if (type == gvar_content_type[key]) {
+                  type = key;
+                  break;
+               }
+            }
+            console.log("CHDR indicates unsupported content type: " + type);
+         }
+         return;
+   }
+   globalThis.last_loaded_mvar = blocks["mvar"];
+   console.log(blocks);
+   render_metadata(blocks["mvar"]);
+   render_map(blocks["mvar"]);
+};
+   </script>
+</html>

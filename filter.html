@@ -1,0 +1,436 @@
+<!doctype html>
+<html>
+   <head>
+      <!-- zlib: -->
+      <script src="third-party/pako/pako.js"></script>
+      
+      <script src="devtools-formatter.js"></script>
+      <script src="parse-foundation-exported-xml.js"></script>
+      
+      <script src="utils.js"></script>
+      <script src="bitstream.js"></script>
+      <script src="bitnumber.js"></script>
+      
+      <script src="variant-content-author.js"></script>
+      <script src="blam-block-_blf.js"></script>
+      <script src="blam-block-chdr.js"></script>
+      <script src="map_variant_mvar.js"></script>
+      
+      <style>
+html {
+   padding: 0;
+   margin:  0;
+}
+body {
+   display:    grid;
+   grid-template:
+      "load"
+      "metadata"
+      "objects" 1fr
+   ;
+   
+   height:     100vh;
+   box-sizing: border-box;
+   
+   padding: .25em;
+   margin:  0;
+   
+   &>section.load {
+   }
+   &>#matching-files {
+      /* needed to prefer scrollbars on this rather than on the body */
+      min-width:  0;
+      min-height: 0;
+      
+      overflow-y: auto;
+      
+      list-style: none;
+      padding:    0;
+      margin:     0;
+      display:    flex;
+      flex-flow:  column nowrap;
+      gap:        1em;
+   }
+}
+.mvar-metadata {
+   display: grid;
+   grid-template-columns: min-content 1fr;
+   gap: .25em;
+   
+   &:not(:empty) {
+      border: 1px solid #CCC;
+      padding: .25em;
+   }
+   
+   &>:is(dt, dd) {
+      padding: .25em .5em;
+      margin:  0;
+      background: #CCC;
+   }
+   &>dt {
+      font-weight: bold;
+      white-space: nowrap;
+   }
+   &>dd {
+   }
+}
+      </style>
+   </head>
+   <body>
+      <section class="load">
+         <input type="file" id="mvar-file" multiple="multiple" />
+         <input type="button" id="read" value="Read" />
+         <hr/>
+         <progress id="progress"></progress>
+      </section>
+      <ul id="matching-files">
+      </ul>
+   </body>
+   <script>
+
+function canvas_id_to_name(id) {
+   switch (id) {
+      case 3006:
+         return "Forge World";
+      default:
+         return "not forge world so we don't care rn";
+   }
+   return null;
+}
+
+function render_metadata(/*MapVariant*/ variant, /*DL element*/node, filename) {
+   let frag = new DocumentFragment();
+   
+   function _add_item(name, value, cls) {
+      let dt = document.createElement("dt");
+      let dd = document.createElement("dd");
+      dt.textContent = name;
+      dd.textContent = value;
+      frag.append(dt, dd);
+      if (cls) {
+         dd.classList.add(cls);
+      }
+   }
+   
+   let src = variant.header;
+   _add_item("Filename", `${filename}`);
+   _add_item("Name", `${src.title}`);
+   _add_item("Description", `${src.description}`);
+   _add_item("Canvas ID", canvas_id_to_name(src.mapID));
+   _add_item("Created By", `${src.createdBy.author} (XUID: ${src.createdBy.xuid})`);
+   _add_item("Modified By", `${src.modifiedBy.author} (XUID: ${src.modifiedBy.xuid})`);
+   
+   node.replaceChildren(frag);
+}
+
+// Load from separate XML file.
+function get_map_named_locations(mapname) {
+   let nl_src;
+   {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", `${mapname}-named-locations.xml`, false);
+      xhr.send(null);
+      
+      let doc = xhr.responseXML;
+      if (!doc || doc.querySelector("parsererror"))
+         return null;
+      nl_src = doc.documentElement;
+   }
+   if (!nl_src)
+      return null;
+   nl_src = parse_foundation_exported_xml(nl_src)["named location volumes"];
+   if (!nl_src || !nl_src.elements)
+      return null;
+   let locations = [];
+   for(let item of nl_src.elements) {
+      let points = item?.points?.elements;
+      if (!points)
+         continue;
+      let location = {
+         height: item.height,
+         sink:   item.sink,
+         name:   item["location name"] || item.name,
+         points: [],
+      };
+      locations.push(location);
+      for(let point of points) {
+         let pos = point.position;
+         pos[1] = -pos[1]; // negate Y
+         location.points.push(pos);
+      }
+   }
+   locations.sort(function(a, b) {
+      if (a.height == null) {
+         if (b.height == null)
+            return 0;
+         return -1;
+      }
+      if (b.height == null)
+         return 1;
+      return a.height < b.height;
+   });
+   return locations;
+}
+
+// Load from separate XML file.
+function get_map_forge_palette(mapname) {
+   let nl_src;
+   {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", `${mapname}-forge-palette.xml`, false);
+      xhr.send(null);
+      
+      let doc = xhr.responseXML;
+      if (!doc || doc.querySelector("parsererror"))
+         return null;
+      nl_src = doc.documentElement;
+   }
+   if (!nl_src)
+      return null;
+   nl_src = parse_foundation_exported_xml(nl_src)["map variant palettes"];
+   if (!nl_src || !nl_src.elements)
+      return null;
+   
+   let types = [];
+   for(let item of nl_src.elements) {
+      let subcategories = item?.entries?.elements;
+      if (!subcategories)
+         continue;
+      let type = {
+         name:                item.name,
+         min_thorage_version: item["minimum thorage version"],
+         subcategories:       []
+      };
+      types.push(type);
+      for(let item of subcategories) {
+         let subcat = {
+            name:                item.name,
+            budget_cost:         item["price per instance"],
+            max_count:           item["maximum allowed"],
+            min_thorage_version: item["minimum thorage version"],
+            entries:             []
+         };
+         type.subcategories.push(subcat);
+         
+         let entries = item.variants?.elements;
+         if (!entries)
+            continue;
+         for(let item of entries) {
+            let entry = {
+               object: item.object,
+            };
+            subcat.entries.push(entry);
+         }
+         subcat.is_submenu = subcat.entries.length > 1;
+      }
+   }
+   return types;
+}
+
+function get_thorage_location_names() {
+   let nl_src;
+   {
+      let xhr = new XMLHttpRequest();
+      xhr.open("GET", "thorage_multi_location_names.location_name_globals_definition.xml", false);
+      xhr.send(null);
+      
+      let doc = xhr.responseXML;
+      if (!doc || doc.querySelector("parsererror"))
+         return null;
+      nl_src = doc.documentElement;
+   }
+   if (!nl_src)
+      return null;
+   nl_src = parse_foundation_exported_xml(nl_src)["location names"];
+   if (!nl_src || !nl_src.elements)
+      return null;
+   return nl_src.elements.map(e => e.name);
+}
+
+// Originally MIT-licensed per: <https://stackoverflow.com/a/29915728>
+function inside(point, vs) {
+    // ray-casting algorithm based on
+    // https://wrf.ecse.rpi.edu/Research/Short_Notes/pnpoly.html
+    
+    var x = point[0], y = point[1];
+    
+    var inside = false;
+    for (var i = 0, j = vs.length - 1; i < vs.length; j = i++) {
+        var xi = vs[i][0], yi = vs[i][1];
+        var xj = vs[j][0], yj = vs[j][1];
+        
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+    
+    return inside;
+}
+
+document.getElementById("read").onclick = async function() {
+   let node  = document.getElementById("mvar-file");
+   let files = node.files;
+   if (!files.length) {
+      console.warn("No file selected.");
+      return;
+   }
+   
+   let list = document.getElementById("matching-files");
+   list.replaceChildren();
+   
+   let progress = document.getElementById("progress");
+   progress.value = 0;
+   progress.max   = files.length;
+   
+   const FORGE_WORLD_LOCATIONS = get_map_named_locations("forge-world");
+   const FORGE_WORLD_PALETTE   = get_map_forge_palette("forge-world");
+   
+   const UNWANTED_LOCATION_NAMES = [
+      "forge_ascension_name",
+      "forge_island_name",
+      "forge_lagoon_name",
+      "forge_sanctuary_name",
+      "forge_arena_name",
+   ];
+   
+   let frag    = new DocumentFragment();
+   let matches = 0;
+   for(let i = 0; i < files.length; ++i) {
+      progress.value = i;
+      let file   = files[i];
+      let buffer = await file.arrayBuffer();
+      //
+      let stream = new Bitstream(buffer);
+      let blocks = {};
+      blocks["_blf"] = new BlamBlockBlamHeader(stream);
+      blocks["chdr"] = new BlamBlockContentHeader(stream);
+      switch (blocks["chdr"].contentType) {
+         case blam_content_type.map_variant:
+            blocks["mvar"] = new MapVariant(stream);
+            break;
+         default:
+            {
+               let type = blocks["chdr"].contentType;
+               for(let key in gvar_content_type) {
+                  if (type == gvar_content_type[key]) {
+                     type = key;
+                     break;
+                  }
+               }
+               console.log("CHDR indicates unsupported content type: " + type);
+            }
+            return;
+      }
+      
+      let mvar = blocks["mvar"];
+      if (mvar.header.mapID != 3006) {
+         continue;
+      }
+      
+      let desired_object_counts = {
+         "ff_large_brace":       8, // Brace, Large // at least 2
+            // https://youtu.be/UE2xOz7x81Q?t=149 // 3 visible here
+            // https://youtu.be/l0EmEI396H8?t=72  // 8 visible here, from 72s to 86s
+         ///*
+         "ff_stair_case":        1, // https://youtu.be/UE2xOz7x81Q?t=113
+         "ff_cylinder_big":      3,
+            // https://youtu.be/UE2xOz7x81Q?t=118 // 2 visible here
+            // https://youtu.be/UE2xOz7x81Q?t=147 // 1 visible here
+         "ff_plat_2x1_flat":     3, // https://youtu.be/UE2xOz7x81Q?t=121 // at least 3
+         "ff_brace":             2, // https://youtu.be/UE2xOz7x81Q?t=136 // at least 2
+         "ff_wall_2x1_corner":   6, // https://youtu.be/UE2xOz7x81Q?t=136 // at least 6
+         "ff_crenel_notch":      1, // https://youtu.be/UE2xOz7x81Q?t=147 // 1 here
+         "ff_door_2":            3,
+            // https://youtu.be/UE2xOz7x81Q?t=148 // 2 visible here
+            // https://youtu.be/l0EmEI396H8?t=102 // 1 visible here, upside-down
+         "ff_ramp_circle_small": 1, // https://youtu.be/UE2xOz7x81Q?t=148 // 1 visible here
+         "street_cone":          5, // https://youtu.be/l0EmEI396H8?t=75  // 5 visible here (during pan over next few seconds)
+         //*/
+      };
+      let seen_object_counts = {};
+      for(let key in desired_object_counts)
+         seen_object_counts[key] = 0;
+      
+      let brace_large_count     = false;
+      let objects_in_bad_places = false;
+      let includes_montana      = false; // verified: see HUD at https://youtu.be/l0EmEI396H8?t=134
+      for(let object of mvar.forgeObjects) {
+         {  // Brace, Large
+            let folder_idx = object.objectTypeForgeFolder;
+            let item_idx   = object.objectTypeForgeFolderItem;
+            
+            let object_name = null;
+            let all_i       = 0;
+            for(let subpalette of FORGE_WORLD_PALETTE) {
+               for(let j = 0; j < subpalette.subcategories.length; ++j, ++all_i) {
+                  let folder_dfn = subpalette.subcategories[j];
+                  if (all_i == folder_idx) {
+                     object_name = folder_dfn.entries[item_idx].object;
+                     break;
+                  }
+               }
+               if (object_name)
+                  break;
+            }
+            for(let key in seen_object_counts) {
+               if (object_name == key) {
+                  ++seen_object_counts[key];
+                  break;
+               }
+            }
+         }
+         if (!objects_in_bad_places) {  // Disqualify maps with objects in undesired regions
+            let x =  object.position.x;
+            let y = -object.position.y;
+            
+            for(let location of FORGE_WORLD_LOCATIONS) {
+               if (location.name == "forge_montana_name" && inside([x, y], location.points)) {
+                  includes_montana = true;
+                  continue;
+               }
+               if (!UNWANTED_LOCATION_NAMES.includes(location.name))
+                  continue;
+               let test = inside([x, y], location.points);
+               if (test) {
+                  objects_in_bad_places = true;
+                  break;
+               }
+            }
+         }
+      }
+      //
+      // Did we meet our requirements?
+      //
+      if (objects_in_bad_places || !includes_montana) {
+         continue;
+      }
+      {
+         let failed = false;
+         for(let key in seen_object_counts) {
+            if (seen_object_counts[key] < desired_object_counts[key]) {
+               failed = true;
+               break;
+            }
+         }
+         if (failed)
+            continue;
+      }
+      
+      let li = document.createElement("li");
+      let dl = document.createElement("dl");
+      dl.classList.add("mvar-metadata");
+      frag.append(li);
+      li.append(dl);
+      render_metadata(mvar, dl, file.name);
+      ++matches;
+   }
+   progress.value = files.length;
+   if (!matches) {
+      let li = document.createElement("li");
+      li.append("<no matches>");
+      frag.append(li);
+   }
+   list.append(frag);
+};
+   </script>
+</html>

@@ -1,0 +1,1136 @@
+<data>
+    <field name="map variant palettes" value="9" type="block"/>
+    <element index="0" name="ff_weapons_human">
+        <field name="name" value="ff_weapons_human" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="10" type="block"/>
+        <element index="0" name="assault_rifle">
+            <field name="name" value="assault_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="assault_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="dmr">
+            <field name="name" value="dmr" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="dmr" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="grenade_launcher">
+            <field name="name" value="grenade_launcher" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="grenade_launcher" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="magnum">
+            <field name="name" value="magnum" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="magnum" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="rocket_launcher">
+            <field name="name" value="rocket_launcher" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="rocket_launcher" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="shotgun">
+            <field name="name" value="shotgun" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="shotgun" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="sniper_rifle">
+            <field name="name" value="sniper_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="sniper_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="7" name="spartan_laser">
+            <field name="name" value="spartan_laser" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="spartan_laser" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="8" name="wep_nade_frag">
+            <field name="name" value="wep_nade_frag" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="frag_grenade" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="32" type="long integer"/>
+            <field name="price per instance" value="5" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="9" name="wep_machinegun">
+            <field name="name" value="wep_machinegun" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="wep_machinegun">
+                <field name="display name" value="wep_machinegun" type="string id"/>
+                <field name="object" value="machinegun" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="75" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="1" name="ff_weapons_covenant">
+        <field name="name" value="ff_weapons_covenant" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="14" type="block"/>
+        <element index="0" name="concussion_rifle">
+            <field name="name" value="concussion_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="concussion_rifle">
+                <field name="display name" value="concussion_rifle" type="string id"/>
+                <field name="object" value="concussion_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="energy_sword">
+            <field name="name" value="energy_sword" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="energy_sword">
+                <field name="display name" value="energy_sword" type="string id"/>
+                <field name="object" value="energy_sword" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="wep_flakcannon">
+            <field name="name" value="wep_flakcannon" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="flak_cannon" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="8" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="gravity_hammer">
+            <field name="name" value="gravity_hammer" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="gravity_hammer">
+                <field name="display name" value="gravity_hammer" type="string id"/>
+                <field name="object" value="gravity_hammer" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="focus_rifle">
+            <field name="name" value="focus_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="focus_rifle">
+                <field name="display name" value="focus_rifle" type="string id"/>
+                <field name="object" value="focus_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="needle_rifle">
+            <field name="name" value="needle_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="needle_rifle">
+                <field name="display name" value="needle_rifle" type="string id"/>
+                <field name="object" value="needle_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="needler">
+            <field name="name" value="needler" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="needler">
+                <field name="display name" value="needler" type="string id"/>
+                <field name="object" value="needler" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="20" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="7" name="wep_plasmalauncher">
+            <field name="name" value="wep_plasmalauncher" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="wep_plasmalauncher">
+                <field name="display name" value="wep_plasmalauncher" type="string id"/>
+                <field name="object" value="plasma_launcher" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="8" name="plasma_pistol">
+            <field name="name" value="plasma_pistol" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="plasma_pistol">
+                <field name="display name" value="plasma_pistol" type="string id"/>
+                <field name="object" value="plasma_pistol" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="9" name="plasma_repeater">
+            <field name="name" value="plasma_repeater" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="plasma_repeater">
+                <field name="display name" value="plasma_repeater" type="string id"/>
+                <field name="object" value="plasma_repeater" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="10" name="plasma_rifle">
+            <field name="name" value="plasma_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="plasma_rifle">
+                <field name="display name" value="plasma_rifle" type="string id"/>
+                <field name="object" value="plasma_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="11" name="spike_rifle">
+            <field name="name" value="spike_rifle" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="spike_rifle">
+                <field name="display name" value="spike_rifle" type="string id"/>
+                <field name="object" value="spike_rifle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="16" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="12" name="wep_nade_plasma">
+            <field name="name" value="wep_nade_plasma" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="plasma_grenade" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="32" type="long integer"/>
+            <field name="price per instance" value="5" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="13" name="wep_plasmaturret">
+            <field name="name" value="wep_plasmaturret" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="plasma_turret_mounted" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="75" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="2" name="ff_armor_abilities">
+        <field name="name" value="ff_armor_abilities" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="7" type="block"/>
+        <element index="0" name="arm_camo">
+            <field name="name" value="arm_camo" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="active_camoflage">
+                <field name="display name" value="active_camoflage" type="string id"/>
+                <field name="object" value="active_camouflage" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="arm_lock">
+            <field name="name" value="arm_lock" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="armor_lockup">
+                <field name="display name" value="armor_lockup" type="string id"/>
+                <field name="object" value="armor_lockup" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="arm_dropshield">
+            <field name="name" value="arm_dropshield" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="drop_shield">
+                <field name="display name" value="drop_shield" type="string id"/>
+                <field name="object" value="drop_shield" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="arm_evade">
+            <field name="name" value="arm_evade" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="evade_elite">
+                <field name="display name" value="evade_elite" type="string id"/>
+                <field name="object" value="evade" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="arm_hologram">
+            <field name="name" value="arm_hologram" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="hologram">
+                <field name="display name" value="hologram" type="string id"/>
+                <field name="object" value="hologram" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="arm_jetpack">
+            <field name="name" value="arm_jetpack" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="jet_pack">
+                <field name="display name" value="jet_pack" type="string id"/>
+                <field name="object" value="jet_pack" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="arm_sprint">
+            <field name="name" value="arm_sprint" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="sprint_spartan">
+                <field name="display name" value="sprint_spartan" type="string id"/>
+                <field name="object" value="sprint" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="3" name="ff_gadgets">
+        <field name="name" value="ff_gadgets" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="8" type="block"/>
+        <element index="0" name="gadget_explosive">
+            <field name="name" value="gadget_explosive" type="string id"/>
+            <field name="variants" value="2" type="block"/>
+            <element index="0" name="exp_fusioncoil">
+                <field name="display name" value="exp_fusioncoil" type="string id"/>
+                <field name="object" value="fusion_coil" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="exp_landmine">
+                <field name="display name" value="exp_landmine" type="string id"/>
+                <field name="object" value="land_mine" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="24" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="gadget_healthstation">
+            <field name="name" value="gadget_healthstation" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="health_station">
+                <field name="display name" value="health_station" type="string id"/>
+                <field name="object" value="health_station" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="8" type="long integer"/>
+            <field name="price per instance" value="25" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="gadget_powerups">
+            <field name="name" value="gadget_powerups" type="string id"/>
+            <field name="variants" value="3" type="block"/>
+            <element index="0" name="powerup_blue">
+                <field name="display name" value="powerup_blue" type="string id"/>
+                <field name="object" value="powerup_blue" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="powerup_red">
+                <field name="display name" value="powerup_red" type="string id"/>
+                <field name="object" value="powerup_red" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="powerup_yellow">
+                <field name="display name" value="powerup_yellow" type="string id"/>
+                <field name="object" value="powerup_yellow" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="6" type="long integer"/>
+            <field name="price per instance" value="50" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="gadget_mancannons">
+            <field name="name" value="gadget_mancannons" type="string id"/>
+            <field name="variants" value="5" type="block"/>
+            <element index="0" name="mancannon_normal">
+                <field name="display name" value="mancannon_normal" type="string id"/>
+                <field name="object" value="ff_man_cannon_forge" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="mancannon_heavy">
+                <field name="display name" value="mancannon_heavy" type="string id"/>
+                <field name="object" value="ff_man_cannon_forge_heavy" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="mancannon_light">
+                <field name="display name" value="mancannon_light" type="string id"/>
+                <field name="object" value="ff_man_cannon_forge_light" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="3" name="mancannon_vehicle">
+                <field name="display name" value="mancannon_vehicle" type="string id"/>
+                <field name="object" value="ff_veh_man_cannon" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="4" name="mancannon_gravlift">
+                <field name="display name" value="mancannon_gravlift" type="string id"/>
+                <field name="object" value="ff_grav_lift" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="8" type="long integer"/>
+            <field name="price per instance" value="100" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="gadget_sfx">
+            <field name="name" value="gadget_sfx" type="string id"/>
+            <field name="variants" value="6" type="block"/>
+            <element index="0" name="sfx_1">
+                <field name="display name" value="sfx_1" type="string id"/>
+                <field name="object" value="colorblind" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="sfx_2">
+                <field name="display name" value="sfx_2" type="string id"/>
+                <field name="object" value="gloomy" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="sfx_3">
+                <field name="display name" value="sfx_3" type="string id"/>
+                <field name="object" value="juicy" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="3" name="sfx_4">
+                <field name="display name" value="sfx_4" type="string id"/>
+                <field name="object" value="nova" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="4" name="sfx_5">
+                <field name="display name" value="sfx_5" type="string id"/>
+                <field name="object" value="olde_timey" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="5" name="sfx_6">
+                <field name="display name" value="sfx_6" type="string id"/>
+                <field name="object" value="pen_and_ink" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="4" type="long integer"/>
+            <field name="price per instance" value="250" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="gadget_teleporters">
+            <field name="name" value="gadget_teleporters" type="string id"/>
+            <field name="variants" value="3" type="block"/>
+            <element index="0" name="teleporter_reciever">
+                <field name="display name" value="teleporter_reciever" type="string id"/>
+                <field name="object" value="ff_teleporter_receiver" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="teleporter_sender">
+                <field name="display name" value="teleporter_sender" type="string id"/>
+                <field name="object" value="ff_teleporter_sender" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="teleporter_2way">
+                <field name="display name" value="teleporter_2way" type="string id"/>
+                <field name="object" value="ff_teleporter_2_way" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="12" type="long integer"/>
+            <field name="price per instance" value="25" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="gadget_toys">
+            <field name="name" value="gadget_toys" type="string id"/>
+            <field name="variants" value="6" type="block"/>
+            <element index="0" name="toys_die">
+                <field name="display name" value="toys_die" type="string id"/>
+                <field name="object" value="dice" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="toys_golfball">
+                <field name="display name" value="toys_golfball" type="string id"/>
+                <field name="object" value="golf_ball" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="toys_golfclub">
+                <field name="display name" value="toys_golfclub" type="string id"/>
+                <field name="object" value="golf_club" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="3" name="toys_killball">
+                <field name="display name" value="toys_killball" type="string id"/>
+                <field name="object" value="damage_sphere" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="4" name="toys_soccerball">
+                <field name="display name" value="toys_soccerball" type="string id"/>
+                <field name="object" value="soccer_ball" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="5" name="toys_tincup">
+                <field name="display name" value="toys_tincup" type="string id"/>
+                <field name="object" value="golf_cup" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="100" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="7" name="gadget_lights">
+            <field name="name" value="gadget_lights" type="string id"/>
+            <field name="variants" value="9" type="block"/>
+            <element index="0" name="ff_light_red">
+                <field name="display name" value="ff_light_red" type="string id"/>
+                <field name="object" value="ff_light_red" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="ff_light_blue">
+                <field name="display name" value="ff_light_blue" type="string id"/>
+                <field name="object" value="ff_light_blue" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="ff_light_green">
+                <field name="display name" value="ff_light_green" type="string id"/>
+                <field name="object" value="ff_light_green" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="3" name="ff_light_orange">
+                <field name="display name" value="ff_light_orange" type="string id"/>
+                <field name="object" value="ff_light_orange" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="4" name="ff_light_purple">
+                <field name="display name" value="ff_light_purple" type="string id"/>
+                <field name="object" value="ff_light_purple" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="5" name="ff_light_yellow">
+                <field name="display name" value="ff_light_yellow" type="string id"/>
+                <field name="object" value="ff_light_yellow" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="6" name="ff_light_white">
+                <field name="display name" value="ff_light_white" type="string id"/>
+                <field name="object" value="ff_light_white" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="7" name="ff_light_red_flash">
+                <field name="display name" value="ff_light_red_flash" type="string id"/>
+                <field name="object" value="ff_light_flash_red" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="8" name="ff_light_yellow_flash">
+                <field name="display name" value="ff_light_yellow_flash" type="string id"/>
+                <field name="object" value="ff_light_flash_yellow" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="2" type="long integer"/>
+            <field name="price per instance" value="250" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="4" name="ff_spawning">
+        <field name="name" value="ff_spawning" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="8" type="block"/>
+        <element index="0" name="spawning_initial">
+            <field name="name" value="spawning_initial" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="initial_spawn_point" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="250" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="spawning_respawn">
+            <field name="name" value="spawning_respawn" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="respawn_point" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="250" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="spawning_camera">
+            <field name="name" value="spawning_camera" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="mp_cinematic_camera" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="32" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="respawn_zone">
+            <field name="name" value="respawn_zone" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="respawn_zone" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="respawn_zone_weak">
+            <field name="name" value="respawn_zone_weak" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="weak_respawn_zone" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="respawn_zone_anti">
+            <field name="name" value="respawn_zone_anti" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="weak_anti_respawn_zone" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="spawning_boundaries_safe">
+            <field name="name" value="spawning_boundaries_safe" type="string id"/>
+            <field name="variants" value="2" type="block"/>
+            <element index="0" name="spawning_safe">
+                <field name="display name" value="spawning_safe" type="string id"/>
+                <field name="object" value="safe_volume" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="spawning_safe_soft">
+                <field name="display name" value="spawning_safe_soft" type="string id"/>
+                <field name="object" value="soft_safe_volume" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="5" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="7" name="spawning_boundaries_kill">
+            <field name="name" value="spawning_boundaries_kill" type="string id"/>
+            <field name="variants" value="2" type="block"/>
+            <element index="0" name="spawning_kill">
+                <field name="display name" value="spawning_kill" type="string id"/>
+                <field name="object" value="kill_volume" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="spawning_kill_soft">
+                <field name="display name" value="spawning_kill_soft" type="string id"/>
+                <field name="object" value="soft_kill_volume" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="32" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="5" name="ff_objectives">
+        <field name="name" value="ff_objectives" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="3" type="block"/>
+        <element index="0" name="obj_flag_base">
+            <field name="name" value="obj_flag_base" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="mp_flag_base" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="obj_plate">
+            <field name="name" value="obj_plate" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="mp_circle" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="obj_hill_marker">
+            <field name="name" value="obj_hill_marker" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="mp_hill_beacon" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="6" name="ff_scenery">
+        <field name="name" value="ff_scenery" type="string id"/>
+        <field name="flags" value="" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="5" type="block"/>
+        <element index="0" name="dlc_slayer_cart_a">
+            <field name="name" value="dlc_slayer_cart_a" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="dlc_slayer_cart_a" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="6" type="long integer"/>
+            <field name="price per instance" value="100" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="dlc_slayer_cart_b">
+            <field name="name" value="dlc_slayer_cart_b" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="dlc_slayer_cart_b" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="6" type="long integer"/>
+            <field name="price per instance" value="100" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="wall">
+            <field name="name" value="wall" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="slayer_door_forge" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="ff_scn_street_cone">
+            <field name="name" value="ff_scn_street_cone" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="street_cone" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="30" type="long integer"/>
+            <field name="price per instance" value="10" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="structure_doors">
+            <field name="name" value="structure_doors" type="string id"/>
+            <field name="variants" value="4" type="block"/>
+            <element index="0" name="door_shield_small">
+                <field name="display name" value="door_shield_small" type="string id"/>
+                <field name="object" value="dlc_hangar_shield_repair_s" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="1" name="door_shield_small1">
+                <field name="display name" value="door_shield_small1" type="string id"/>
+                <field name="object" value="dlc_hangar_forcefield_small_solid" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="2" name="door_shield_large">
+                <field name="display name" value="door_shield_large" type="string id"/>
+                <field name="object" value="dlc_hangar_shield" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <element index="3" name="door_shield_large1">
+                <field name="display name" value="door_shield_large1" type="string id"/>
+                <field name="object" value="dlc_hangar_forcefield_solid" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="8" type="long integer"/>
+            <field name="price per instance" value="25" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="7" name="custom_pieces">
+        <field name="name" value="custom_pieces" type="string id"/>
+        <field name="flags" value="hidden#this palette is only visible in superforge, and objects within it are only editable in superforge" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="3" type="block"/>
+        <element index="0" name="low_grav">
+            <field name="name" value="low_grav" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="low_grav_volume">
+                <field name="display name" value="low_grav_volume" type="string id"/>
+                <field name="object" value="large_low_grav_volume" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="1" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="shield_door_large">
+            <field name="name" value="shield_door_large" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="sheild_door_large">
+                <field name="display name" value="sheild_door_large" type="string id"/>
+                <field name="object" value="" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="1" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="shield_door_small">
+            <field name="name" value="shield_door_small" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="sheild_door_small">
+                <field name="display name" value="sheild_door_small" type="string id"/>
+                <field name="object" value="" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="10" type="long integer"/>
+            <field name="price per instance" value="1" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+    <element index="8" name="structure_blocks">
+        <field name="name" value="structure_blocks" type="string id"/>
+        <field name="flags" value="hidden#this palette is only visible in superforge, and objects within it are only editable in superforge" type="byte flags"/>
+        <field name="pad" value=" " type="pad"/>
+        <field name="minimum thorage version" value="0" type="short integer"/>
+        <field name="entries" value="12" type="block"/>
+        <element index="0" name="block_2x2">
+            <field name="name" value="block_2x2" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="box_l" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="1" name="block_1x1">
+            <field name="name" value="block_1x1" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="box_m" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="2" name="block_3x3">
+            <field name="name" value="block_3x3" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="box_xl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="3" name="block_4x4">
+            <field name="name" value="block_4x4" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="box_xxl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="4" name="block_5x5_flat">
+            <field name="name" value="block_5x5_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="box_xxxl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="5" name="block_3x3_flat">
+            <field name="name" value="block_3x3_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_l" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="6" name="block_2x2_flat">
+            <field name="name" value="block_2x2_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_m" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="7" name="block_1x1_flat">
+            <field name="name" value="block_1x1_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_s" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="8" name="block_4x4_flat">
+            <field name="name" value="block_4x4_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_xl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="9" name="block_4x4_tall">
+            <field name="name" value="block_4x4_tall" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_xxl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="10" name="block_5x1_flat">
+            <field name="name" value="block_5x1_flat" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="wall_xxxl" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+        <element index="11" name="destination_delta">
+            <field name="name" value="destination_delta" type="string id"/>
+            <field name="variants" value="1" type="block"/>
+            <element index="0" name="">
+                <field name="display name" value="" type="string id"/>
+                <field name="object" value="danger_zone" type="tag reference"/>
+                <field name="variant name" value="" type="string id"/>
+            </element>
+            <field name="maximum allowed" value="50" type="long integer"/>
+            <field name="price per instance" value="0" type="long integer"/>
+            <field name="minimum thorage version" value="0" type="short integer"/>
+            <field name="pad" value=" " type="pad"/>
+        </element>
+    </element>
+</data>
