@@ -35,7 +35,7 @@ Large amounts of important information are defined solely in the base canvases (
 
 Disclaimer: Most of the code for reading bitpacked data and map variants is very old (some of it was originally used to prototype ReachVariantTool, and my first investigation into map variants dates back years) and probably not up to my current standards of quality.
 
-Disclaimer: As of this writing, the rest of this project is something I quickly threw together in a couple days, in order to help out someone who was working on something interesting involving game preservation. (There's a particular map variant from circa 2011 that they're hoping to find. The `filter.html` file exists to help them in their search, though I haven't kept it updated after sending it to them.) I spent a couple more days digging into things like object rotations and some of the properties I hadn't decoded yet at the time. Expect this code to be pretty rough in quality.
+Disclaimer: As of this writing, the rest of this project is something I quickly threw together in a couple days, in order to help out someone who was working on something interesting involving game preservation. I spent a couple more days digging into things like object rotations and some of the properties I hadn't decoded yet at the time. Expect this repo to be pretty rough in quality.
 
 
 ## Licensing info
@@ -48,13 +48,20 @@ This project incorporates the [pako](https://github.com/nodeca/pako) library for
 * Table showing the map metadata
 * Overhead view of all object positions (indicated by dots)
   * If the data is available, the base canvas's built-in named locations will be drawn, making it easier to discern the map's shape and tell roughly where objects have been placed on it
-** Objects with cylindrical or spherical shapes have those shapes drawn (in the former case, on the blind assumption that the objects aren't rotated)
+  * Objects with cylindrical or spherical shapes have those shapes drawn (in the former case, on the blind assumption that the objects aren't rotated)
   * Map can be zoomed using a slider
 * Table listing all placed placed objects and some of their properties
   * Clicking on a table row selects that object: its dot on the map will turn red
 * Buttons to filter the tableview
   * By map palette category
   * By trait (e.g. "require Forge label")
+
+
+## How to use
+
+Dump it onto a local web server and load `index.html`. Upload a map variant file using the file uploader at the top. The whole thing runs in-browser.
+
+The `filter.html` file exists as a favor for someone else, who's trying to find a specific map variant from circa 2011 given very little information to go on. (Basically the only visual evidence of it that remains available today is one (1) YouTube video.) It's designed to take several (potentially hundreds) map variants at a time, scan them, and tell you if any of them have the Forge objects (in the appropriate quantities) that the desired map variant is known to have. The search criteria are hardcoded into the script with no UI to adjust them with. I also haven't updated the HTML file since I sent it to them, so I may have ended up making breaking changes to the scripts it relies on.
 
 
 ## How to add map data
